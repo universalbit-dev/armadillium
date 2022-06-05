@@ -34,9 +34,9 @@ Debian 11 Extra Packages :
 
 ##### Default Network Settings 
 
-DHCP      IP Address
-Gateway   Default Internet Provider Settings
-DNS       Default Internet Provider Settings
+* DHCP      IP Address
+* Gateway   Default Internet Provider Settings
+* DNS       Default Internet Provider Settings
 
 ##### Security Standard:
 
