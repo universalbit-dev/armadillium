@@ -84,7 +84,8 @@ Make the Swap File Permanent
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
-##### Kernel Settings:
+
+# /etc/sysctl.conf - Configuration file for setting system variables
 ```
 nano /etc/sysctl.conf
 ```
