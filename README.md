@@ -85,7 +85,7 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
 
-# /etc/sysctl.conf - Configuration file for setting system variables
+##### /etc/sysctl.conf - Configuration file for setting system variables
 ```
 nano /etc/sysctl.conf
 ```
