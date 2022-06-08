@@ -51,7 +51,7 @@ apt install ufw havp haproxy fail2ban
 
 Firmware Linux: Add Debian 11 Repository and install firmware-linux
 
-edit repository sources
+edit and update repository sources
 ```
 nano /etc/apt/sources.list
 ```
@@ -67,7 +67,7 @@ deb http://deb.debian.org/debian/ bullseye-backports main contrib non-free
 ```
 
 ```
-apt install firmware-linux
+apt install firmware-linux mesa-utils
 ```
 
 ##### Swap File 16GB:
