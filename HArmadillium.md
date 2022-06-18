@@ -45,10 +45,10 @@ nano /etc/hosts
 ```
 127.0.0.1    localhost.localdomain localhost
 127.0.1.1    localdomain.domain localdomain
-10.0.2.144   armadillium01
-10.0.2.145   armadillium02
-10.0.2.146   armadillium03
-10.0.2.147   armadillium04
+192.168.1.144   armadillium01
+192.168.1.145   armadillium02
+192.168.1.146   armadillium03
+192.168.1.147   armadillium04
 ::1     localhost ip6-localhost ip6-loopback
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
