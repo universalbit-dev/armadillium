@@ -1,7 +1,6 @@
 
 [UniversalBit](https://universalbit.it/blockchain) OnceAgain
 
-##### ThinClient Setup:[Armadillium](https://universalbit.it:3000/universalbit-blockchain/Armadillium/src/master/README.md)
 
 
 ### HArmadillium     
@@ -354,3 +353,7 @@ dc-version: 2.0.5
 have-watchdog: false
 no-quorum-policy: ignore
 stonith-enabled: false
+   
+   
+##### ThinClient Setup:[Armadillium](https://universalbit.it:3000/universalbit-blockchain/Armadillium/src/master/README.md)
+
