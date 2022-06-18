@@ -5,7 +5,7 @@ Create your Software, Application, WebPage,static or dynamic content.
 
 #### UniversalBit OnceAgain
 
-##### Armadillium Digital Working Environment  
+##### Armadillium Digital Working Environment   Setup:[HArmadillium](https://github.com/universalbit-dev/armadillium/blob/main/HArmadillium.md)
 
 --Working Example:
 * Server 01   (UniversalBit)
