@@ -2,17 +2,18 @@
 
 Development need a digital working environment for develop with or without limit.
 Create your Software, Application, WebPage,static or dynamic content.
-Setup HA :[HArmadillium](https://github.com/universalbit-dev/armadillium/blob/main/HArmadillium.md)
+
+Quick Setup HA : [HArmadillium](https://github.com/universalbit-dev/armadillium/blob/main/HArmadillium.md)
 
 #### [UniversalBit](https://universalbit.it/blockchain) OnceAgain
 
 ##### Armadillium Digital Working Environment   
 
---Working Example:
-* Server 01   (UniversalBit)
-* Server 02   (UniversalBit)
-* Server 03   (Blockchain Network Node)
-* Server 04   (Gekko-M4 Nodejs App)
+--Thin client HP T610 Working Example:
+* armadillium01   (UniversalBit)
+* armadillium02   (UniversalBit)
+* armadillium03   (Blockchain Network Node)
+* armadillium04   (Gekko-M4 Nodejs App)
 
 
 ##### HARDWARE:
