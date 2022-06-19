@@ -27,10 +27,10 @@ Setup HA :[HArmadillium](https://github.com/universalbit-dev/armadillium/blob/ma
 Debian 11 Minimal Server Installation 
 * [Foss](https://www.fosslinux.com/49956/install-debian-11-minimal-server.htm)
 
-Debian 11 Extra Packages :
+Extra Packages :
 
 * Low resources Desktop-Environment [Xfce](https://www.xfce.org/)
-* Apache WebServer [Apache](https://www.apache.org/)
+* [Nginx](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/)
 * SSH connections [wiki](https://wiki.debian.org/SSH)
 
 ##### Default Network Settings 
