@@ -11,8 +11,8 @@ Setup HA :[HArmadillium](https://github.com/universalbit-dev/armadillium/blob/ma
 --Working Example:
 * Server 01   (UniversalBit)
 * Server 02   (UniversalBit)
-* Server 03   (Blockchain Network Node)
-* Server 04   (Gekko-M4 Nodejs App)
+* Server 03   ([Blockchain](https://bitcoin.org/en/full-node#reduce-storage) Network Node)
+* Server 04   ([Gekko-M4](https://github.com/universalbit-dev/gekko-m4) Nodejs App)
 
 
 ##### HARDWARE:
