@@ -1,6 +1,4 @@
-
-[UniversalBit](https://universalbit.it/blockchain) OnceAgain
-
+##### ThinClient Setup:[Armadillium](https://universalbit.it:3000/universalbit-blockchain/Armadillium/src/master/README.md)
 
 
 ### HArmadillium     
@@ -215,13 +213,79 @@ WebServer:
 ```
 sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/nginx.conf op monitor timeout="5s" interval="5s"
 ```
+
+
 Nignx Reverse Proxy:
+
 ```
+apt-get install nginx -y
+
+```
+
+edit the Nginx default file:
+
+```
+nano /etc/nginx/sites-enabled/default
+
+```
+
+```
+server {
+listen 80;
+listen [::]:80;
+server_name 192.168.1.144;
+return 301 https://$server_name$request_uri;
+}
+
+upstream websocket {
+    server 192.168.1.144;
+    server 192.168.1.145;
+    server 192.168.1.146;
+    server 192.168.1.147;
+
+
+
+}
+
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name 192.168.1.144;
+    root /usr/share/nginx/html;
+    ssl_certificate /etc/nginx/ssl/nginx.crt;
+    ssl_certificate_key /etc/nginx/ssl/nginx.key;    
+
+    location / {
+            proxy_buffers 8 32k;
+            proxy_buffer_size 64k;
+            proxy_pass http://websocket;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header Host $http_host;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-NginX-Proxy true;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+            proxy_read_timeout 86400s;
+            proxy_send_timeout 86400s;
+    }
+}
+
+```
+
+To create a self signed certificate:
+
+```
+    sudo mkdir /etc/nginx/ssl
+    sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt
+
 ```
 
 Floating IP:
+
 ```
 sudo pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=192.168.1.143 cidr_netmask=32 op monitor interval=30s
+
 ```
 
 ##### Constraint:
@@ -277,10 +341,12 @@ armadillium01: Unable to authenticate to armadillium01 - (HTTP error: 401)...
 armadillium04: Unable to authenticate to armadillium04 - (HTTP error: 401)...
 armadillium02: Unable to authenticate to armadillium02 - (HTTP error: 401)...
 
-connect via ssh to armadillium03 and start pcsd service
+connect via ssh to armadillium03 and start pcsd service and repeat this for all nodes.
 ```
 sudo service pcsd start
+
 ```
+
 ```
 sudo pcs cluster status
 ```
@@ -353,7 +419,3 @@ dc-version: 2.0.5
 have-watchdog: false
 no-quorum-policy: ignore
 stonith-enabled: false
-   
-   
-##### ThinClient Setup:[Armadillium](https://universalbit.it:3000/universalbit-blockchain/Armadillium/src/master/README.md)
-
