@@ -41,15 +41,36 @@ nano /etc/hosts
 ```
 
 ```
-127.0.0.1    localhost.localdomain localhost
-127.0.1.1    localdomain.domain localdomain
-192.168.1.144   armadillium01
-192.168.1.145   armadillium02
-192.168.1.146   armadillium03
-192.168.1.147   armadillium04
+#example armadillium01 host setup
+
+192.168.1.144      armadillium01
+192.168.1.145      armadillium02
+192.168.1.146      armadillium03
+192.168.1.147      armadillium04
+127.0.0.1          localhost
+127.0.1.1          armadillium01.universalbit armadillium01
+
+# The following lines are desirable for IPv6 capable hosts
 ::1     localhost ip6-localhost ip6-loopback
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
+
+
+#generic example 
+#
+# local-ip-address machinename
+# local-ip-address machinename
+# local-ip-address machinename
+# local-ip-address machinename
+#
+# 127.0.0.1  localhost
+# 127.0.1.1  machinename.domain machinename
+# The following lines are desirable for IPv6 capable hosts
+# ::1     localhost ip6-localhost ip6-loopback
+# ff02::1 ip6-allnodes
+# ff02::2 ip6-allrouters
+#
+
 ```
 
 
