@@ -31,6 +31,7 @@ Extra Packages :
 
 * Low resources Desktop-Environment [Xfce](https://www.xfce.org/)
 * [Nginx](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/)
+* [Apache2](https://)
 * SSH connections [wiki](https://wiki.debian.org/SSH)
 
 ##### Default Network Settings 
