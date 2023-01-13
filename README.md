@@ -24,7 +24,7 @@ Setup HA :[HArmadillium](https://github.com/universalbit-dev/armadillium/blob/ma
 Debian 11 Minimal Server Installation 
 * [Foss](https://www.fosslinux.com/49956/install-debian-11-minimal-server.htm)
 
-Extra Packages :
+
 * [Nginx](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/)
 * [Apache2](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-debian-10)[Debian 11]
 * SSH connections [wiki](https://wiki.debian.org/SSH)
