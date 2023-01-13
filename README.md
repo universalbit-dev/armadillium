@@ -25,20 +25,11 @@ Debian 11 Minimal Server Installation
 * [Foss](https://www.fosslinux.com/49956/install-debian-11-minimal-server.htm)
 
 Extra Packages :
-
-* Low resources Desktop-Environment [Xfce](https://www.xfce.org/)
 * [Nginx](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/)
-* [Apache2](https://)
+* [Apache2](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-debian-10)
 * SSH connections [wiki](https://wiki.debian.org/SSH)
-
-##### Default Network Settings 
-
-* DHCP      IP Address
-* Gateway   Default Internet Provider Settings
-* DNS       Default Internet Provider Settings
-
+* Low resources Desktop-Environment [Xfce](https://www.xfce.org/)
 ##### Security Standard:
-
 * Ufw       Firewall
 * Havp      Antivirus Scanner
 * Haproxy   LoadBalancer
@@ -49,15 +40,6 @@ apt install ufw havp haproxy fail2ban
 ```
 
 Firmware Linux: Add Debian 11 Repository and install firmware-linux
-
-edit and update repository sources
-```
-nano /etc/apt/sources.list
-```
-
-```
-apt install mesa-utils
-```
 
 ##### Swap File 16GB:
 Add Swap File.
