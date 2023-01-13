@@ -57,16 +57,6 @@ edit and update repository sources
 nano /etc/apt/sources.list
 ```
 
-use this repository:
-
-```
-deb http://deb.debian.org/debian/ bullseye main contrib non-free
-deb http://deb.debian.org/debian/ bullseye-updates main contrib non-free
-deb http://deb.debian.org/debian bullseye-proposed-updates main contrib non-free
-deb http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
-deb http://deb.debian.org/debian/ bullseye-backports main contrib non-free
-```
-
 ```
 apt install firmware-linux mesa-utils
 ```
@@ -80,6 +70,7 @@ sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 ```
+
 Make the Swap File Permanent
 ```
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
@@ -96,7 +87,7 @@ nano /etc/sysctl.conf
 # See /etc/sysctl.d/ for additional system variables.
 # See sysctl.conf (5) for information.
 #
-kernel.domainname = homenet.telecomitalia.it
+#kernel.domainname =
 
 # Uncomment the following to stop low-level messages on console
 kernel.printk = 3 4 1 3
@@ -162,20 +153,10 @@ vm.vfs_cache_pressure = 50
 
 ```
 
+
 Monitor server performance with [Netdata](https://www.netdata.cloud/) via browser:
 ```
 wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh
-```
-
-[Atom](https://atom.io/) Editor.
-```
-wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
-sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
-sudo apt-get update
-```
-
-```
-sudo apt-get install atom
 ```
 
 
