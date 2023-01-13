@@ -31,13 +31,12 @@ apt install corosync pacemaker pcs ufw nginx haveged heartbeat
 *[SSH](https://wiki.debian.org/SSH)
 *[Corosync,PCS,PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
 *[UFW](https://wiki.debian.org/Uncomplicated%20Firewall%20(ufw))
-
-<image><schema>
+*[HAProxy](https://www.haproxy.com/)
 
 #### Setup Hosts File for all node.
 
 ```
-nano /etc/hosts
+sudo nano /etc/hosts
 ```
 
 ```
@@ -83,7 +82,6 @@ ssh armadillium01@192.168.1.144
 
 
 ##### High Availability
-<image><schema>
 
 * [Corosync](https://packages.debian.org/sid/corosync)
 cluster engine daemon and utilities
@@ -201,7 +199,6 @@ service {
   ver: 1
 }
 ```
-
 
 * [PCS](https://packages.debian.org/buster/pcs)
 Pacemaker Configuration System
