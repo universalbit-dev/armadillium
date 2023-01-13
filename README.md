@@ -58,7 +58,7 @@ nano /etc/apt/sources.list
 ```
 
 ```
-apt install firmware-linux mesa-utils
+apt install mesa-utils
 ```
 
 ##### Swap File 16GB:
