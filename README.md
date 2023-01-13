@@ -18,10 +18,7 @@ Setup HA :[HArmadillium](https://github.com/universalbit-dev/armadillium/blob/ma
 ##### HARDWARE:
 
 * N.4 ThinClient HPT610 : Cpu 1.6GHz ,1GB RAM ,AMD Palm Graphics,120GB SSD,Gigabit Ethernet
-* N.4 Ethernet Cable 
-* N.1 Gigabit Ethernet Switch 5 port
 
-<image><schema>
 
 ##### SOFTWARE: 
 Debian 11 Minimal Server Installation 
