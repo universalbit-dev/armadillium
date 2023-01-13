@@ -38,9 +38,6 @@ Extra Packages :
 ```
 apt install ufw havp haproxy fail2ban
 ```
-
-Firmware Linux: Add Debian 11 Repository and install firmware-linux
-
 ##### Swap File 16GB:
 Add Swap File.
 
