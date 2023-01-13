@@ -255,14 +255,17 @@ server_name 192.168.1.144;
 return 301 https://$server_name$request_uri;
 }
 
+server {
+    server_name 192.168.1.144;
+    listen 8001;
+    return 301 https://$host$request_uri;
+    }
+    
 upstream websocket {
-    server 192.168.1.144;
-    server 192.168.1.145;
-    server 192.168.1.146;
-    server 192.168.1.147;
-
-
-
+    server 192.168.1.144; #01
+    server 192.168.1.145; #02
+    server 192.168.1.146; #03
+    server 192.168.1.147; #04
 }
 
 server {
