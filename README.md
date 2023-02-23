@@ -6,27 +6,23 @@ Development need a digital working environment for develop with or without limit
 Create your Software, Application, WebPage,static or dynamic content.
 Setup HA :[HArmadillium](https://github.com/universalbit-dev/armadillium/blob/main/HArmadillium.md)
 
-#### [UniversalBit](https://universalbit.it/blockchain) OnceAgain
+#### [UniversalBit](https://github.com/universalbit-dev) OnceAgain
 
 ##### Armadillium Digital Working Environment   
 
 --Working Example:
-* Server 01   (UniversalBit)
-* Server 02   (UniversalBit)
-* Server 03   ([Blockchain](https://bitcoin.org/en/full-node#reduce-storage) Network Node)
-* Server 04   ([Gekko-M4](https://github.com/universalbit-dev/gekko-m4) Nodejs App)
-
+* Server 01   [UniversalBit-dev](https://github.com/universalbit-dev/universalbit-dev)
+* Server 02   [UniversalBit-dev](https://github.com/universalbit-dev/universalbit-dev)
+* Server 03   [Nodejs App](https://github.com/universalbit-dev/iD)
+* Server 04   [Gekko-M4](https://github.com/universalbit-dev/gekko-m4) 
 
 ##### HARDWARE:
 
 * N.4 ThinClient HPT610 : Cpu 1.6GHz ,1GB RAM ,AMD Palm Graphics,120GB SSD,Gigabit Ethernet
 
-
 ##### SOFTWARE: 
 Debian 11 Minimal Server Installation 
 * [Foss](https://www.fosslinux.com/49956/install-debian-11-minimal-server.htm)
-
-
 * [Nginx](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/)
 * [Apache2](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-debian-10)[Debian 11]
 * SSH connections [wiki](https://wiki.debian.org/SSH)
