@@ -25,6 +25,7 @@ Debian 11 Minimal Server Installation
 * [Foss](https://www.fosslinux.com/49956/install-debian-11-minimal-server.htm)
 * [Nginx](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/)
 * [Apache2](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-debian-10)[Debian 11]
+* [Hadoop-Common](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html)
 * SSH connections [wiki](https://wiki.debian.org/SSH)
 * Low resources Desktop-Environment [Xfce](https://www.xfce.org/)
 ##### Security Standard:
