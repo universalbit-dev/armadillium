@@ -445,3 +445,7 @@ dc-version: 2.0.5
 have-watchdog: false
 no-quorum-policy: ignore
 stonith-enabled: false
+
+[Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
+
+
