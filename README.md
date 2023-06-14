@@ -137,6 +137,6 @@ Monitor server performance with [Netdata](https://www.netdata.cloud/) via browse
 wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh
 ```
 
-
+[Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 
 HappyCoding!
