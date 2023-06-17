@@ -1,7 +1,4 @@
 ##### ThinClient Setup:[Armadillium](https://github.com/universalbit-dev/armadillium)
-
-![HP-T610](https://github.com/universalbit-dev/armadillium/blob/main/img/HArmadillium.png)
-
 ### HArmadillium     
 Clustering Thin Client HP-T610 Gnu/Linux Debian 11 Bullseye.
 
