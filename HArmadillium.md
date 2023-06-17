@@ -24,7 +24,7 @@ Hardware && Software: [Read](https://universalbit.it:3000/universalbit-blockchai
 Required Packages:
 
 ```
-apt install corosync pacemaker pcs ufw nginx haveged heartbeat
+apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 
 ```
 
