@@ -1,9 +1,6 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 
 # Armadillium
-
-![HP-T610](https://github.com/universalbit-dev/armadillium/blob/main/img/HP-T610-181x300.png)
-
 Development need a digital working environment for develop with or without limit.
 Create your Software, Application, WebPage,static or dynamic content.
 Setup HA :[HArmadillium](https://github.com/universalbit-dev/armadillium/blob/main/HArmadillium.md)
