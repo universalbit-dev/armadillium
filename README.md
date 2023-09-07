@@ -51,8 +51,6 @@ Make the Swap File Permanent
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
-
-##### /etc/sysctl.conf - Configuration file for setting system variables
 ```
 nano /etc/sysctl.conf
 ```
@@ -89,9 +87,6 @@ net.ipv4.ip_forward=1
 #  Enabling this option disables Stateless Address Autoconfiguration
 #  based on Router Advertisements for this host
 net.ipv6.conf.all.forwarding=1
-
-
-###################################################################
 # Additional settings - these settings can improve the network
 # security of the host and prevent against some network attacks
 # including spoofing attacks and man in the middle attacks through
@@ -116,8 +111,6 @@ net.ipv6.conf.all.accept_source_route = 0
 # Log Martian Packets
 net.ipv4.conf.all.log_martians = 1
 #
-
-###################################################################
 # Magic system request Key
 # 0=disable, 1=enable all, >1 bitmask of sysrq functions
 # See https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
@@ -125,15 +118,14 @@ net.ipv4.conf.all.log_martians = 1
 kernel.sysrq=438
 vm.swappiness=10
 vm.vfs_cache_pressure = 50
-
 ```
 
 
-Monitor server performance with [Netdata](https://www.netdata.cloud/) via browser:
+##### Monitor server performance with [Netdata](https://www.netdata.cloud/) via browser:
 ```
 wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh
 ```
 
 [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 
-HappyCoding!
+### HappyCoding!
