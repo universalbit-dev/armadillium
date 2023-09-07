@@ -3,13 +3,13 @@
 # Armadillium
 Development need a digital working environment for develop with or without limit.
 Create your Software, Application, WebPage,static or dynamic content.
-Setup HA :[HArmadillium](https://github.com/universalbit-dev/armadillium/blob/main/HArmadillium.md)
+[HArmadillium](https://github.com/universalbit-dev/armadillium/blob/main/HArmadillium.md)
 
 #### [UniversalBit](https://github.com/universalbit-dev) OnceAgain
 
 ##### Armadillium Digital Working Environment   
 
---Working Example:
+##### Working Example:
 * Server 01   [UniversalBit-dev](https://github.com/universalbit-dev/universalbit-dev)
 * Server 02   [UniversalBit-dev](https://github.com/universalbit-dev/universalbit-dev)
 * Server 03   [Nodejs App](https://github.com/universalbit-dev/iD)
