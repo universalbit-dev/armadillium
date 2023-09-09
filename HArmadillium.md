@@ -29,12 +29,12 @@ apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 
 ```
 
-*[NetWorkManager](https://wiki.debian.org/NetworkConfiguration)
-*[Hosts](https://wiki.debian.org/Hostname)
-*[SSH](https://wiki.debian.org/SSH)
-*[Corosync,PCS,PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
-*[UFW](https://wiki.debian.org/Uncomplicated%20Firewall%20(ufw))
-*[HAProxy](https://www.haproxy.com/)
+* [NetWorkManager](https://wiki.debian.org/NetworkConfiguration)
+* [Hosts](https://wiki.debian.org/Hostname)
+* [SSH](https://wiki.debian.org/SSH)
+* [Corosync,PCS,PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
+* [UFW](https://wiki.debian.org/Uncomplicated%20Firewall%20(ufw))
+* [HAProxy](https://www.haproxy.com/)
 
 #### Setup Hosts File for all node.
 
