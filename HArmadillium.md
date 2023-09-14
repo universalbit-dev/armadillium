@@ -35,6 +35,11 @@ apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 * [Corosync,PCS,PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
 * [UFW](https://wiki.debian.org/Uncomplicated%20Firewall%20(ufw))
 * [HAProxy](https://www.haproxy.com/)
+  
+#### [OpenCL](https://github.com/universalbit-dev/CityGenerator/blob/master/OpenCL-WebGL-WebCL-Taiwan_Feb-2012.pdf)
+```
+sudo apt install ocl-icd-opencl-dev
+```
 
 #### Setup Hosts File for all node.
 
