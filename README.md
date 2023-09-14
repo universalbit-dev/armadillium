@@ -120,6 +120,11 @@ vm.swappiness=10
 vm.vfs_cache_pressure = 50
 ```
 
+#### [OpenCL](https://github.com/universalbit-dev/CityGenerator/blob/master/OpenCL-WebGL-WebCL-Taiwan_Feb-2012.pdf)
+```
+sudo apt install ocl-icd-opencl-dev
+```
+
 
 ##### Monitor server performance with [Netdata](https://www.netdata.cloud/) via browser:
 ```
