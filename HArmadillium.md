@@ -2,15 +2,13 @@
 ### HArmadillium     
 Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) HP-T610 Gnu/Linux Debian 11 Bullseye.
 
-* [Nginx High Availability](https://www.howtoforge.com/tutorial/how-to-set-up-nginx-high-availability-with-pacemaker-corosync-and-crmsh-on-ubuntu-1604/)
-* [high-availability-setup-with-corosync](https://www.digitalocean.com/community/tutorials/how-to-create-a-high-availability-setup-with-corosync-pacemaker-and-reserved-ips-on-ubuntu-14-04)
 
-Documentation:
+Resources:
 * [HA](https://wiki.debian.org/Debian-HA) 
 * [Debian-HA](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
 * [Cluster-Labs](https://clusterlabs.org/)
-
-Useful Links:
+* [Nginx High Availability](https://www.howtoforge.com/tutorial/how-to-set-up-nginx-high-availability-with-pacemaker-corosync-and-crmsh-on-ubuntu-1604/)
+* [High-availability-setup-with-corosync](https://www.digitalocean.com/community/tutorials/how-to-create-a-high-availability-setup-with-corosync-pacemaker-and-reserved-ips-on-ubuntu-14-04)
 * [Apache as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-use-apache-http-server-as-reverse-proxy-using-mod_proxy-extension-ubuntu-20-04)
 * [Nginx HA](https://www.howtoforge.com/tutorial/how-to-set-up-nginx-high-availability-with-pacemaker-corosync-on-centos-7/)
 * [Apache Hadoop](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/ClusterSetup.html)
@@ -241,20 +239,14 @@ sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/ngi
 ```
 
 
-Nignx Reverse Proxy:
-
+* Nginx as Reverse Proxy
 ```
 apt-get install nginx -y
-
 ```
-
 edit the Nginx default file:
-
 ```
 nano /etc/nginx/sites-enabled/default
-
 ```
-
 ```
 server {
 listen 80;
@@ -301,20 +293,17 @@ server {
 }
 
 ```
+Note:
+* [Nginx as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-reverse-proxy-on-ubuntu-22-04)
+* [Apache2 as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-use-apache-http-server-as-reverse-proxy-using-mod_proxy-extension-ubuntu-20-04)
 
-To create a self signed certificate:
+* [Nginx SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-22-04)
+* [Apache2 SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04)
 
-```
-    sudo mkdir /etc/nginx/ssl
-    sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt
-
-```
 
 Floating IP:
-
 ```
 sudo pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=192.168.1.143 cidr_netmask=32 op monitor interval=30s
-
 ```
 
 ##### Constraint:
