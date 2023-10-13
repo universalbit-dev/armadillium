@@ -1,30 +1,17 @@
 ##### ThinClient Setup:[Armadillium](https://github.com/universalbit-dev/armadillium)
+
 ### HArmadillium     
 Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) HP-T610 Gnu/Linux Debian 11 Bullseye.
-
-
-Resources:
-* [HA](https://wiki.debian.org/Debian-HA) 
-* [Debian-HA](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
-* [Cluster-Labs](https://clusterlabs.org/)
-* [Nginx High Availability](https://www.howtoforge.com/tutorial/how-to-set-up-nginx-high-availability-with-pacemaker-corosync-and-crmsh-on-ubuntu-1604/)
-* [High-availability-setup-with-corosync](https://www.digitalocean.com/community/tutorials/how-to-create-a-high-availability-setup-with-corosync-pacemaker-and-reserved-ips-on-ubuntu-14-04)
-* [Apache as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-use-apache-http-server-as-reverse-proxy-using-mod_proxy-extension-ubuntu-20-04)
-* [Nginx HA](https://www.howtoforge.com/tutorial/how-to-set-up-nginx-high-availability-with-pacemaker-corosync-on-centos-7/)
-* [Apache Hadoop](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/ClusterSetup.html)
-* [High Availability](https://www.digitalocean.com/community/tutorials/how-to-create-a-high-availability-setup-with-corosync-pacemaker-and-reserved-ips-on-ubuntu-14-04)
-* [Pacemaker](https://github.com/ClusterLabs/pacemaker)
 
 -----
 
 Hardware && Software: [Read](https://universalbit.it:3000/universalbit-blockchain/Armadillium)
 
 
-Required Packages:
+* Required Packages:
 
 ```
 apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
-
 ```
 
 * [NetWorkManager](https://wiki.debian.org/NetworkConfiguration)
@@ -430,6 +417,8 @@ corosync   port: 5403-5404-5405
 ```
 sudo pcs property list
 ```
+example terminal output 
+```
 Cluster Properties:
 cluster-infrastructure: corosync
 cluster-name: HArmadillium
@@ -437,7 +426,20 @@ dc-version: 2.0.5
 have-watchdog: false
 no-quorum-policy: ignore
 stonith-enabled: false
+```
 
+---
+Resources:
+* [HA](https://wiki.debian.org/Debian-HA) 
+* [Debian-HA](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
+* [Cluster-Labs](https://clusterlabs.org/)
+* [Nginx High Availability](https://www.howtoforge.com/tutorial/how-to-set-up-nginx-high-availability-with-pacemaker-corosync-and-crmsh-on-ubuntu-1604/)
+* [High-availability-setup-with-corosync](https://www.digitalocean.com/community/tutorials/how-to-create-a-high-availability-setup-with-corosync-pacemaker-and-reserved-ips-on-ubuntu-14-04)
+* [Apache as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-use-apache-http-server-as-reverse-proxy-using-mod_proxy-extension-ubuntu-20-04)
+* [Nginx HA](https://www.howtoforge.com/tutorial/how-to-set-up-nginx-high-availability-with-pacemaker-corosync-on-centos-7/)
+* [Apache Hadoop](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/ClusterSetup.html)
+* [High Availability](https://www.digitalocean.com/community/tutorials/how-to-create-a-high-availability-setup-with-corosync-pacemaker-and-reserved-ips-on-ubuntu-14-04)
+* [Pacemaker](https://github.com/ClusterLabs/pacemaker)
 [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 
 
