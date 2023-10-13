@@ -2,12 +2,7 @@
 
 ### HArmadillium     
 Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) HP-T610 Gnu/Linux Debian 11 Bullseye.
-
 -----
-
-Hardware && Software: [Read](https://universalbit.it:3000/universalbit-blockchain/Armadillium)
-
-
 * Required Packages:
 
 ```
