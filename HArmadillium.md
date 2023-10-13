@@ -17,8 +17,8 @@ apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 * [HAProxy](https://www.haproxy.com/)
   
 #### 
-* [OpenCL](https://github.com/universalbit-dev/CityGenerator/blob/master/OpenCL-WebGL-WebCL-Taiwan_Feb-2012.pdf
-* [Why?]https://www.khronos.org/opencl/)
+* [OpenCL](https://github.com/universalbit-dev/CityGenerator/blob/master/OpenCL-WebGL-WebCL-Taiwan_Feb-2012.pdf)
+* [Why?](https://www.khronos.org/opencl/)
 ```
 sudo apt install ocl-icd-opencl-dev
 ```
