@@ -104,10 +104,9 @@ logging {
 }
 ```
 
+* ##### Corosync-keygen Authorize
 
-#####Corosync-keygen Authorize
-
-armadillium01:
+* armadillium01:
 ```
 sudo corosync-keygen
 sudo scp /etc/corosync/authkey armadillium02@192.168.1.145:/tmp
@@ -115,41 +114,35 @@ sudo scp /etc/corosync/authkey armadillium03@192.168.1.146:/tmp
 sudo scp /etc/corosync/authkey armadillium04@192.168.1.147:/tmp
 ```
 
-
-armadillium02:
+* armadillium02:
 ```
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
 
-
-armadillium03:
+* armadillium03:
 ```
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
 
-
-armadillium04:
+* armadillium04:
 ```
-
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
 
-
-##### Create the pcmk file
+* ##### Create the pcmk file
 create pcmk file for all nodes:
 ```
 sudo mkdir /etc/corosync/service.d
 sudo nano /etc/corosync/service.d/pcmk
 ```
 
-
-//add this lines
+* ##### add this lines of code
 ```
 service {
   name: pacemaker
@@ -159,36 +152,35 @@ service {
 
 * [PCS](https://packages.debian.org/buster/pcs)
 Pacemaker Configuration System
-
 -Description:
 pcs is a corosync and pacemaker configuration tool. It permits users to easily view, modify and create pacemaker based clusters.
 
 pcs also provides pcsd, which operates as a GUI and remote server for pcs. Together pcs and pcsd form the recommended configuration tool for use with pacemaker.
 
-
-##### PCS Setup Cluster
+* ##### PCS Setup Cluster[?]()
 ```
 sudo pcs cluster setup HArmadillium armadillium01 armadillium02 armadillium03 armadillium04
 sudo pcs cluster start --all
 ```
-Disable STONITH 
+* Disable STONITH 
 ```
 pcs property set stonith-enabled=false
 ```
 
-Ignore Quorum policy
+* Ignore Quorum policy[?]()
 ```
 pcs property set no-quorum-policy=ignore
 ```
 ##### PCS Create Resources:
 
-[WebServer Permissions](https://),[Nginx Reverse Proxy](https://),[Floating IP](https://)
+* [WebServer Permissions](https://)
+* [Nginx Reverse Proxy](https://)
+* [Floating IP](https://)
 
 WebServer:
 ```
 sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/nginx.conf op monitor timeout="5s" interval="5s"
 ```
-
 
 * Nginx as Reverse Proxy
 ```
@@ -244,20 +236,20 @@ server {
 }
 
 ```
-Note:
+* ##### Note:
 * [Nginx as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-reverse-proxy-on-ubuntu-22-04)
 * [Apache2 as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-use-apache-http-server-as-reverse-proxy-using-mod_proxy-extension-ubuntu-20-04)
-
+---
 * [Nginx SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-22-04)
 * [Apache2 SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04)
 
 
-Floating IP:
+* Floating IP:
 ```
 sudo pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=192.168.1.143 cidr_netmask=32 op monitor interval=30s
 ```
 
-##### Constraint:
+##### Constraint:[?]()
 ```
 sudo pcs constraint colocation add webserver with virtual_ip INFINITY
 ```
@@ -268,7 +260,7 @@ sudo pcs constraint order webserver then virtual_ip
 
 
 
-#### Authorize Host:
+#### Authorize Host: [?]()
 Repeat this for all nodes(armadillium01,armadillium02,armadillium03,armadilliumN)
 
 Auth hosts with user hacluster and unified password for all nodes.
@@ -313,20 +305,19 @@ armadillium02: Unable to authenticate to armadillium02 - (HTTP error: 401)...
 connect via ssh to armadillium03 and start pcsd service and repeat this for all nodes.
 ```
 sudo service pcsd start
-
 ```
 
 ```
 sudo pcs cluster status
 ```
-PCSD Status:
+PCSD Status: [?]()
   * armadillium03: Online
   * armadillium04: Online
   * armadillium02: Online
   * armadillium01: Online
 
 
-##### PaceMaker [>](https://packages.debian.org/sid/pacemaker)cluster resource manager:
+##### [PaceMaker](https://packages.debian.org/sid/pacemaker) cluster resource manager: [?]()
 
 -Description:
 At its core, Pacemaker is a distributed finite state machine capable of co-ordinating the startup and recovery of inter-related services across a set of machines.
@@ -340,7 +331,7 @@ Pacemaker understands many different resource types (OCF, SYSV, systemd) and can
 sudo update-rc.d pacemaker defaults 20 01
 ```
 
-##### ufw [>](https://packages.debian.org/sid/ufw)program for managing a Netfilter firewall
+##### [UFW](https://packages.debian.org/sid/ufw)program for managing a Netfilter firewall  [?]()
 
 -Description:
 The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
