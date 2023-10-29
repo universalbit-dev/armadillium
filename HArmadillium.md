@@ -331,7 +331,7 @@ Pacemaker understands many different resource types (OCF, SYSV, systemd) and can
 sudo update-rc.d pacemaker defaults 20 01
 ```
 
-##### [UFW](https://packages.debian.org/sid/ufw)program for managing a Netfilter firewall  [?]()
+##### [UFW](https://packages.debian.org/sid/ufw) Firewall  [?]()
 
 -Description:
 The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
