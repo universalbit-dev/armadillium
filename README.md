@@ -6,17 +6,19 @@ Development need a digital working environment for develop with or without limit
 Create your Software, Application, WebPage,static or dynamic content.
 
 # Cluster [HArmadillium](https://github.com/universalbit-dev/armadillium/blob/main/HArmadillium.md)
- ##### HARDWARE:
+##### HARDWARE:
 * N.4 ThinClient HPT610 : Cpu 1.6GHz ,1GB RAM ,AMD Palm Graphics,120GB SSD,Gigabit Ethernet
 
-##### Debian 11 Minimal Server Installation 
-* [Foss](https://www.fosslinux.com/49956/install-debian-11-minimal-server.htm)
+##### Debian 11 Minimal Server Installation :[Foss](https://www.fosslinux.com/49956/install-debian-11-minimal-server.htm)
 ---
- ##### WebServer
+
+##### WebServer:
 * [Nginx](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/)
 * [Apache2](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-debian-10)[Debian 11]
+
 ---
 SSH connections [wiki](https://wiki.debian.org/SSH)
+---
 
 ##### Basic Security (If needed,use this: [SELKS](https://github.com/StamusNetworks/SELKS))
 * [Ufw](https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29)       Firewall
