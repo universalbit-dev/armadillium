@@ -43,8 +43,7 @@ ssh armadillium01@192.168.1.144
 * [Corosync](https://packages.debian.org/sid/corosync)
 cluster engine daemon and utilities
 
--Description:
-The Corosync Cluster Engine is a Group Communication System with additional features for implementing high availability within applications. The project provides four C Application Programming Interface features:
+##### The Corosync Cluster Engine is a Group Communication System with additional features for implementing high availability within applications. The project provides four C Application Programming Interface features:
 
  * A closed process group communication model with virtual synchrony
    guarantees for creating replicated state machines.
@@ -162,31 +161,32 @@ pcs also provides pcsd, which operates as a GUI and remote server for pcs. Toget
 sudo pcs cluster setup HArmadillium armadillium01 armadillium02 armadillium03 armadillium04
 sudo pcs cluster start --all
 ```
-* Disable STONITH 
+* ##### Disable STONITH 
 ```
 pcs property set stonith-enabled=false
 ```
 
-* Ignore Quorum policy[?]()
+* ##### Ignore Quorum policy[?]()
 ```
 pcs property set no-quorum-policy=ignore
 ```
-##### PCS Create Resources:
+---
 
+##### PCS Create Resources:
 * [WebServer Permissions](https://)
 * [Nginx Reverse Proxy](https://)
 * [Floating IP](https://)
 
-WebServer:
+* WebServer:
 ```
 sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/nginx.conf op monitor timeout="5s" interval="5s"
 ```
-
 * Nginx as Reverse Proxy
 ```
 apt-get install nginx -y
 ```
-edit the Nginx default file:
+
+* edit the Nginx default file:
 ```
 nano /etc/nginx/sites-enabled/default
 ```
@@ -236,6 +236,7 @@ server {
 }
 
 ```
+---
 * ##### Note:
 * [Nginx as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-reverse-proxy-on-ubuntu-22-04)
 * [Apache2 as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-use-apache-http-server-as-reverse-proxy-using-mod_proxy-extension-ubuntu-20-04)
