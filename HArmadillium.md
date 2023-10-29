@@ -176,8 +176,9 @@ pcs property set no-quorum-policy=ignore
 * [WebServer Permissions](https://)
 * [Nginx Reverse Proxy](https://)
 * [Floating IP](https://)
+* [WebServer](https://)
 
-* WebServer:
+* ##### Create WebServer Resource
 ```
 sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/nginx.conf op monitor timeout="5s" interval="5s"
 ```
