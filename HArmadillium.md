@@ -310,12 +310,11 @@ armadillium02: Unable to authenticate to armadillium02 - (HTTP error: 401)...
 sudo service pcsd start
 ```
 
-* pcs cluster status
+* PCSD Status: [?]()
 ```
 sudo pcs cluster status
 ```
 ```
-PCSD Status: [?]()
   * armadillium03: Online
   * armadillium04: Online
   * armadillium02: Online
