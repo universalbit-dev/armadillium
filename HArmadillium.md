@@ -295,36 +295,37 @@ armadillium02: Starting Cluster...
 ```
 sudo pcs cluster enable --all
 ```
+```
 note: **Error
 Warning: Unable to read the known-hosts file: No such file or directory: '/var/lib/pcsd/known-hosts'
 armadillium03: Unable to authenticate to armadillium03 - (HTTP error: 401)...
 armadillium01: Unable to authenticate to armadillium01 - (HTTP error: 401)...
 armadillium04: Unable to authenticate to armadillium04 - (HTTP error: 401)...
 armadillium02: Unable to authenticate to armadillium02 - (HTTP error: 401)...
+```
 
-connect via ssh to armadillium03 and start pcsd service and repeat this for all nodes.
+* ##### connect via ssh to armadillium03 and start pcsd service and repeat this for all nodes.
 ```
 sudo service pcsd start
 ```
 
+* pcs cluster status
 ```
 sudo pcs cluster status
+```
 ```
 PCSD Status: [?]()
   * armadillium03: Online
   * armadillium04: Online
   * armadillium02: Online
   * armadillium01: Online
-
+```
 
 ##### [PaceMaker](https://packages.debian.org/sid/pacemaker) cluster resource manager: [?]()
-
 -Description:
 At its core, Pacemaker is a distributed finite state machine capable of co-ordinating the startup and recovery of inter-related services across a set of machines.
 
 Pacemaker understands many different resource types (OCF, SYSV, systemd) and can accurately model the relationships between them (colocation, ordering).
-
-
 
 ##### run pacemaker after corosync service.
 ```
@@ -336,7 +337,6 @@ sudo update-rc.d pacemaker defaults 20 01
 -Description:
 The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
 
-
 Enable http/https traffic,corosync,pacemaker and pcs ports must be allowed.
 
 ```
@@ -344,14 +344,12 @@ sudo ufw allow http
 sudo ufw allow https
 ```
 
-Firewall Rules:
-
+* Firewall Rules:
 ```
 ufw default allow outgoing
 ```
 
-allow nodes host ,enable corosync,pacemaker and pcs ports:
-
+* ##### allow nodes host ,enable corosync,pacemaker and pcs ports:
 ```
 sudo ufw allow from 192.168.1.143
 sudo ufw allow from 192.168.1.144
@@ -360,19 +358,23 @@ sudo ufw allow from 192.168.1.146
 sudo ufw allow from 192.168.1.147
 ```
 
-example:
+* ##### allow port 2224 (Any)
 ```
 sudo ufw allow 2224
 ```
 
+```
 pcs        port: 2224
 pacemaker  port: 3121
 corosync   port: 5403-5404-5405
+```
 
+* ##### Property List
 ```
 sudo pcs property list
 ```
-example terminal output 
+
+##### example terminal output 
 ```
 Cluster Properties:
 cluster-infrastructure: corosync
