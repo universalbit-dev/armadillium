@@ -8,57 +8,24 @@ Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) HP-T610 Gnu/
 ```
 apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 ```
-
 * [NetWorkManager](https://wiki.debian.org/NetworkConfiguration)
 * [Hosts](https://wiki.debian.org/Hostname)
-* [SSH](https://wiki.debian.org/SSH)
 * [Corosync,PCS,PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
-* [UFW](https://wiki.debian.org/Uncomplicated%20Firewall%20(ufw))
-* [HAProxy](https://www.haproxy.com/)
-  
-#### 
-* [OpenCL](https://github.com/universalbit-dev/CityGenerator/blob/master/OpenCL-WebGL-WebCL-Taiwan_Feb-2012.pdf)
-* [Why?](https://www.khronos.org/opencl/)
-```
-sudo apt install ocl-icd-opencl-dev
-```
 
 #### Setup Hosts File for all node.
-
 ```
 sudo nano /etc/hosts
 ```
-
+* ##### example [armadillium01](https://github.com/universalbit-dev/HArmadillium) host setup
 ```
-#example armadillium01 host setup
-
+#
 192.168.1.144      armadillium01
 192.168.1.145      armadillium02
 192.168.1.146      armadillium03
 192.168.1.147      armadillium04
 127.0.0.1          localhost
 127.0.1.1          armadillium01.universalbit armadillium01
-
-# The following lines are desirable for IPv6 capable hosts
-::1     localhost ip6-localhost ip6-loopback
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
-
-
-#generic example 
-#
 # local-ip-address machinename
-# local-ip-address machinename
-# local-ip-address machinename
-# local-ip-address machinename
-#
-# 127.0.0.1  localhost
-# 127.0.1.1  machinename.domain machinename
-# The following lines are desirable for IPv6 capable hosts
-# ::1     localhost ip6-localhost ip6-loopback
-# ff02::1 ip6-allnodes
-# ff02::2 ip6-allrouters
-#
 
 ```
 
