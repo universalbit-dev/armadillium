@@ -276,20 +276,21 @@ sudo pcs host auth armadillium03
 username: hacluster
 password: same-password-for-all-nodes
 
-Repeat this command for all nodes (armadillium01,armadillium02,armadilliumN)
+##### Repeat this command for all nodes (armadillium01,armadillium02,armadilliumN)
 ```
 pcs host auth armadillium03
 ```
 
-
 ```
 sudo pcs cluster start --all
+```
+##### ...
 ```
 armadillium03: Starting Cluster...
 armadillium04: Starting Cluster...
 armadillium01: Starting Cluster...
 armadillium02: Starting Cluster...
-
+```
 
 
 ```
