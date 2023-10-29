@@ -19,7 +19,7 @@ Create your Software, Application, WebPage,static or dynamic content.
 ---
 * SSH connections [wiki](https://wiki.debian.org/SSH)
 
-##### Security Standard: If needed, use this: [SELKS](https://github.com/StamusNetworks/SELKS)
+##### Basic Security (If needed,use this: [SELKS](https://github.com/StamusNetworks/SELKS))
 * [Ufw](https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29)       Firewall
 * [Havp](https://www.havp.org/)      Antivirus Scanner
 * [Haproxy](https://www.haproxy.org/)   LoadBalancer
