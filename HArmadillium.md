@@ -5,7 +5,7 @@ Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) HP-T610 Gnu/
 -----
 * Required Packages:
 
-```
+```bash
 apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 ```
 * [NetWorkManager](https://wiki.debian.org/NetworkConfiguration)
@@ -13,7 +13,7 @@ apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 * [Corosync,PCS,PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
 
 #### Setup Hosts File for all node.
-```
+```bash
 sudo nano /etc/hosts
 ```
 * ##### example [armadillium01](https://github.com/universalbit-dev/HArmadillium) host setup
@@ -33,10 +33,9 @@ sudo nano /etc/hosts
 ##### SSH
 connect to each node via terminal commands:
 example:
-```
+```bash
 ssh armadillium01@192.168.1.144
 ```
-
 
 ##### High Availability
 
@@ -57,11 +56,11 @@ cluster engine daemon and utilities
 
 ##### Corosync Configuration File:
 
-```
+```bash
 nano /etc/corosync/corosync.conf
 ```
 
-```
+```bash
 totem {
   version: 2
   cluster_name: HArmadillium
@@ -106,7 +105,7 @@ logging {
 * ##### Corosync-keygen Authorize
 
 * armadillium01:
-```
+```bash
 sudo corosync-keygen
 sudo scp /etc/corosync/authkey armadillium02@192.168.1.145:/tmp
 sudo scp /etc/corosync/authkey armadillium03@192.168.1.146:/tmp
@@ -114,21 +113,21 @@ sudo scp /etc/corosync/authkey armadillium04@192.168.1.147:/tmp
 ```
 
 * armadillium02:
-```
+```bash
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
 
 * armadillium03:
-```
+```bash
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
 
 * armadillium04:
-```
+```bash
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
@@ -136,13 +135,13 @@ sudo chmod 400 /etc/corosync/authkey
 
 * ##### Create the pcmk file
 create pcmk file for all nodes:
-```
+```bash 
 sudo mkdir /etc/corosync/service.d
 sudo nano /etc/corosync/service.d/pcmk
 ```
 
 * ##### add this lines of code
-```
+```bash
 service {
   name: pacemaker
   ver: 1
@@ -157,17 +156,17 @@ pcs is a corosync and pacemaker configuration tool. It permits users to easily v
 pcs also provides pcsd, which operates as a GUI and remote server for pcs. Together pcs and pcsd form the recommended configuration tool for use with pacemaker.
 
 * ##### PCS Setup Cluster[?]()
-```
+```bash
 sudo pcs cluster setup HArmadillium armadillium01 armadillium02 armadillium03 armadillium04
 sudo pcs cluster start --all
 ```
 * ##### Disable STONITH 
-```
+```bash
 pcs property set stonith-enabled=false
 ```
 
 * ##### Ignore Quorum policy[?]()
-```
+```bash
 pcs property set no-quorum-policy=ignore
 ```
 ---
@@ -179,19 +178,19 @@ pcs property set no-quorum-policy=ignore
 * [WebServer](https://)
 
 * ##### Create WebServer Resource
-```
+```bash
 sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/nginx.conf op monitor timeout="5s" interval="5s"
 ```
 * Nginx as Reverse Proxy
-```
+```bash
 apt-get install nginx -y
 ```
 
 * edit the Nginx default file:
-```
+```bash
 nano /etc/nginx/sites-enabled/default
 ```
-```
+```bash
 server {
 listen 80;
 listen [::]:80;
@@ -247,16 +246,16 @@ server {
 
 
 * Floating IP:
-```
+```bash
 sudo pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=192.168.1.143 cidr_netmask=32 op monitor interval=30s
 ```
 
 ##### Constraint:[?]()
-```
+```bash
 sudo pcs constraint colocation add webserver with virtual_ip INFINITY
 ```
 
-```
+```bash
 sudo pcs constraint order webserver then virtual_ip
 ```
 
@@ -271,7 +270,7 @@ note: **Info
 user hacluster auto created when install pcs package.
 
 Auth node to known-hosts,repeat for all nodes
-```
+```bash
 sudo pcs host auth armadillium03
 ```
 
@@ -279,15 +278,15 @@ username: hacluster
 password: same-password-for-all-nodes
 
 ##### Repeat this command for all nodes (armadillium01,armadillium02,armadilliumN)
-```
+```bash
 pcs host auth armadillium03
 ```
 
-```
+```bash
 sudo pcs cluster start --all
 ```
 ##### ...
-```
+```bash
 armadillium03: Starting Cluster...
 armadillium04: Starting Cluster...
 armadillium01: Starting Cluster...
@@ -295,7 +294,7 @@ armadillium02: Starting Cluster...
 ```
 
 
-```
+```bash
 sudo pcs cluster enable --all
 ```
 ```
@@ -308,15 +307,15 @@ armadillium02: Unable to authenticate to armadillium02 - (HTTP error: 401)...
 ```
 
 * ##### connect via ssh to armadillium03 and start pcsd service and repeat this for all nodes.
-```
+```bash
 sudo service pcsd start
 ```
 
 * PCSD Status: [?]()
-```
+```bash
 sudo pcs cluster status
 ```
-```
+```bash
   * armadillium03: Online
   * armadillium04: Online
   * armadillium02: Online
@@ -330,7 +329,7 @@ At its core, Pacemaker is a distributed finite state machine capable of co-ordin
 Pacemaker understands many different resource types (OCF, SYSV, systemd) and can accurately model the relationships between them (colocation, ordering).
 
 ##### run pacemaker after corosync service.
-```
+```bash
 sudo update-rc.d pacemaker defaults 20 01
 ```
 
@@ -341,18 +340,18 @@ The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfi
 
 Enable http/https traffic,corosync,pacemaker and pcs ports must be allowed.
 
-```
+```bash
 sudo ufw allow http
 sudo ufw allow https
 ```
 
 * Firewall Rules:
-```
+```bash
 ufw default allow outgoing
 ```
 
 * ##### allow nodes host ,enable corosync,pacemaker and pcs ports:
-```
+```bash
 sudo ufw allow from 192.168.1.143
 sudo ufw allow from 192.168.1.144
 sudo ufw allow from 192.168.1.145
@@ -361,23 +360,23 @@ sudo ufw allow from 192.168.1.147
 ```
 
 * ##### allow port 2224 (Any)
-```
+```bash
 sudo ufw allow 2224
 ```
 
-```
+```bash
 pcs        port: 2224
 pacemaker  port: 3121
 corosync   port: 5403-5404-5405
 ```
 
 * ##### Property List
-```
+```bash
 sudo pcs property list
 ```
 
 ##### example terminal output 
-```
+```bash
 Cluster Properties:
 cluster-infrastructure: corosync
 cluster-name: HArmadillium
