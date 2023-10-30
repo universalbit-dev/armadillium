@@ -26,15 +26,15 @@ SSH connections [wiki](https://wiki.debian.org/SSH)
 * [Haproxy](https://www.haproxy.org/)   LoadBalancer
 * [Fail2Ban](https://github.com/fail2ban/fail2ban)  DDos Protection
 
-```
+```bash
 apt install ufw havp haproxy fail2ban
 ```
 #### [OpenCL](https://github.com/universalbit-dev/CityGenerator/blob/master/OpenCL-WebGL-WebCL-Taiwan_Feb-2012.pdf)
-```
+```bash
 apt install ocl-icd-opencl-dev
 ```
 ##### Monitor server performance with [Netdata](https://www.netdata.cloud/) via browser:
-```
+```bash
 wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh
 ```
 
