@@ -33,9 +33,11 @@ apt install ufw havp haproxy fail2ban
 ```bash
 apt install ocl-icd-opencl-dev
 ```
-#### [6to4](https://github.com/universalbit-dev/HArmadillium/blob/main/6to4.md)
 
-##### Monitor server performance with [Netdata](https://www.netdata.cloud/) via browser:
+#### [6to4](https://github.com/universalbit-dev/HArmadillium/blob/main/6to4.md) IPv6 Address Planning
+
+##### Monitor server performance with 
+* [Netdata](https://www.netdata.cloud/) via browser:
 ```bash
 wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh
 ```
