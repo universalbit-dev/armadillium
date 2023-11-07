@@ -171,7 +171,7 @@ pcs property set no-quorum-policy=ignore
 ```
 ---
 
-##### PCS Create Resources:
+##### [PCS Create Resources](https://www.golinuxcloud.com/create-cluster-resource-in-ha-cluster-examples/):
 * [WebServer Permissions](https://)
 * [Nginx Reverse Proxy](https://)
 * [Floating IP](https://)
