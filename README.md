@@ -25,6 +25,7 @@ SSH connections [wiki](https://wiki.debian.org/SSH)
 * [Havp](https://www.havp.org/)      Antivirus Scanner
 * [Haproxy](https://www.haproxy.org/)   LoadBalancer
 * [Fail2Ban](https://github.com/fail2ban/fail2ban)  DDos Protection
+* [Haveged](https://wiki.archlinux.org/title/Haveged#) (HAVEGED inspired algorithm has been included in the Linux kernel )
 
 ```bash
 apt install ufw havp haproxy fail2ban
