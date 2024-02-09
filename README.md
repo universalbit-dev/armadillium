@@ -9,7 +9,7 @@ Create your Software, Application, WebPage,static or dynamic content.
 ##### HARDWARE:
 * N.4 ThinClient HPT610 : Cpu 1.6GHz ,1GB RAM ,AMD Palm Graphics,120GB SSD,Gigabit Ethernet
 
-##### Debian 12 Minimal Server Installation :[...]()
+##### Debian 12 Minimal Server Installation :[Home](https://www.debian.org/)
 ##### Debian 11 Minimal Server Installation :[Foss](https://www.fosslinux.com/49956/install-debian-11-minimal-server.htm)
 ---
 
