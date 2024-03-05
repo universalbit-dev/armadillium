@@ -2,6 +2,8 @@
 
 ### HArmadillium     
 Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) HP-T610 Gnu/Linux Debian 11 Bullseye.
+##### [Debian 12](https://www.howtoforge.com/tutorial/debian-minimal-server/)
+
 -----
 * Required Packages:
 
