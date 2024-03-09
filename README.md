@@ -8,10 +8,11 @@ Development need a digital working environment for develop with or without limit
 Create your Software, Application, WebPage,static and dynamic content.
 
 # Cluster [HArmadillium](https://github.com/universalbit-dev/armadillium/blob/main/HArmadillium.md)
+
 ##### HARDWARE:
 * N.4 ThinClient HPT610 : Cpu 1.6GHz ,1GB RAM ,AMD Palm Graphics,120GB SSD,Gigabit Ethernet
 
-##### Debian Minimal Server Installation :[Home](https://www.debian.org/)
+##### Debian Minimal Server Installation :[Debian Community](https://www.debian.org/)
 ##### [Debian 11] Minimal Server Installation :[Foss](https://www.fosslinux.com/49956/install-debian-11-minimal-server.htm)
 ##### [Debian 12](https://www.howtoforge.com/tutorial/debian-minimal-server/)
 ---
@@ -34,7 +35,7 @@ SSH connections [wiki](https://wiki.debian.org/SSH)
 ```bash
 apt install ufw havp haproxy fail2ban
 ```
-#### [OpenCL](https://github.com/universalbit-dev/CityGenerator/blob/master/OpenCL-WebGL-WebCL-Taiwan_Feb-2012.pdf)
+#### [OpenCL](https://github.com/universalbit-dev/CityGenerator/blob/master/OpenCL-WebGL-WebCL-Taiwan_Feb-2012.pdf) and [AMDVLK](https://github.com/universalbit-dev/AMDVLK)
 ```bash
 apt install ocl-icd-opencl-dev
 ```
