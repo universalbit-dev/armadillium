@@ -35,10 +35,14 @@ SSH connections [wiki](https://wiki.debian.org/SSH)
 ```bash
 apt install ufw havp haproxy fail2ban
 ```
-#### [OpenCL](https://github.com/universalbit-dev/CityGenerator/blob/master/OpenCL-WebGL-WebCL-Taiwan_Feb-2012.pdf) and [AMDVLK](https://github.com/universalbit-dev/AMDVLK)
+Debian/Ubuntu distro:
+#### [OpenCL](https://github.com/KhronosGroup/OpenCL-SDK) and [AMDVLK](https://github.com/universalbit-dev/AMDVLK)
 ```bash
-apt install ocl-icd-opencl-dev
+apt-get install libssl-dev libx11-dev libxcb1-dev x11proto-dri2-dev libxcb-dri3-dev libxcb-dri2-0-dev libxcb-present-dev libxshmfence-dev libxrandr-dev libwayland-dev ocl-icd-opencl-dev 
 ```
+###### amdvlk other [distro](https://github.com/GPUOpen-Drivers/AMDVLK?tab=readme-ov-file#install-dev-and-tools-packages)
+
+---
 
 #### [6to4](https://github.com/universalbit-dev/HArmadillium/blob/main/6to4.md) IPv6 Address Planning
 
