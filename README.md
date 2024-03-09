@@ -1,9 +1,11 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
-<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/armadillium.png" width="100" />
+<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/ecosystem_gran_canaria_edited.png" width="auto" />
 
 # Armadillium (ThinClient)
+<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/armadillium.png" width="5%" />
+
 Development need a digital working environment for develop with or without limit.
-Create your Software, Application, WebPage,static or dynamic content.
+Create your Software, Application, WebPage,static and dynamic content.
 
 # Cluster [HArmadillium](https://github.com/universalbit-dev/armadillium/blob/main/HArmadillium.md)
 ##### HARDWARE:
