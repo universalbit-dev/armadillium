@@ -2,7 +2,7 @@
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/ecosystem_gran_canaria_edited.png" width="auto" />
 
 # [Armadillium](https://github.com/universalbit-dev/HArmadillium) (ThinClient)
-<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/armadillium.png" width="5%" />
+<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/armadillidium.png" width="5%" />
 
 Development need a digital working environment for develop with or without limit.
 Create your Software, Application, WebPage,static and dynamic content.
