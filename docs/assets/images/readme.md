@@ -5,7 +5,7 @@ Images:
 * [Ecosystem](https://en.wikipedia.org/wiki/Ecosystem)
 * [Ecosystem Approach](https://en.wikipedia.org/wiki/Ecosystem_approach)
 ---
-<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/armadillium.png" width="100" />
+<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/armadillidium.png" width="100" />
 
 * [Armadillidium Depressum](https://en.wikipedia.org/wiki/Armadillidium)
 * [Armadillidium Nasatum](https://en.wikipedia.org/wiki/Armadillidium_nasatum)
