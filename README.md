@@ -1,7 +1,7 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/ecosystem_gran_canaria_edited.png" width="auto" />
 
-# [Armadillium](https://github.com/universalbit-dev/HArmadillium) (ThinClient)
+# [Armadillium](https://en.wikipedia.org/wiki/Thin_client) (ThinClient)
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/armadillidium.png" width="5%" />
 
 Development need a digital working environment for develop with or without limit.
