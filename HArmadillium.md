@@ -4,7 +4,11 @@
 ### HArmadillium     
 * Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) [HP-T610]() Gnu/Linux Debian 11 [Bullseye](https://www.debian.org/releases/bullseye/).
 * Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) [HP-T630]() Gnu/Linux Debian 12 [BookWorm](https://www.debian.org/releases/bookworm/).
-##### [Debian 12](https://www.howtoforge.com/tutorial/debian-minimal-server/)
+
+---
+
+##### [Debian 11 Minimal Server](https://www.howtoforge.com/tutorial/debian-11-bullseye-minimal-server/)
+##### [Debian 12 Minimal Server](https://www.howtoforge.com/tutorial/debian-minimal-server/)
 
 -----
 * Required Packages:
