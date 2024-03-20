@@ -2,7 +2,8 @@
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/ecosystem_gran_canaria_edited.png" width="auto" />
 
 ### HArmadillium     
-* Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) HP-T610 and Gnu/Linux Debian 11 Bullseye.
+* Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) [HP-T610]() Gnu/Linux Debian 11 [Bullseye](https://www.debian.org/releases/bullseye/).
+* Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) [HP-T630]() Gnu/Linux Debian 12 [BookWorm](https://www.debian.org/releases/bookworm/).
 ##### [Debian 12](https://www.howtoforge.com/tutorial/debian-minimal-server/)
 
 -----
