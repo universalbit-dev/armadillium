@@ -16,8 +16,6 @@
 ```bash
 apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 ```
-* [NetWorkManager](https://wiki.debian.org/NetworkConfiguration)
-* [Hosts](https://wiki.debian.org/Hostname)
 * [Corosync,PCS,PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
 
 #### Setup Hosts File for all node.
@@ -411,6 +409,7 @@ Resources:
 * [Nginx HA](https://www.howtoforge.com/tutorial/how-to-set-up-nginx-high-availability-with-pacemaker-corosync-on-centos-7/)
 * [High Availability](https://www.digitalocean.com/community/tutorials/how-to-create-a-high-availability-setup-with-corosync-pacemaker-and-reserved-ips-on-ubuntu-14-04)
 * [Pacemaker](https://github.com/ClusterLabs/pacemaker)
-[Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
-
+* [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
+* [NetWorkManager](https://wiki.debian.org/NetworkConfiguration)
+* [Hosts](https://wiki.debian.org/Hostname)
 
