@@ -178,11 +178,6 @@ pcs property set no-quorum-policy=ignore
 ---
 
 ##### [PCS Create Resources](https://www.golinuxcloud.com/create-cluster-resource-in-ha-cluster-examples/):
-* [WebServer Permissions](https://)
-* [Nginx Reverse Proxy](https://)
-* [Floating IP](https://)
-* [WebServer](https://)
-
 * ##### Create WebServer Resource
 ```bash
 sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/nginx.conf op monitor timeout="5s" interval="5s"
