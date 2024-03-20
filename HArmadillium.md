@@ -161,7 +161,7 @@ pcs is a corosync and pacemaker configuration tool. It permits users to easily v
 
 pcs also provides pcsd, which operates as a GUI and remote server for pcs. Together pcs and pcsd form the recommended configuration tool for use with pacemaker.
 
-* ##### PCS Setup Cluster[?]()
+* ##### PCS Setup Cluster
 ```bash
 sudo pcs cluster setup HArmadillium armadillium01 armadillium02 armadillium03 armadillium04
 sudo pcs cluster start --all
@@ -171,7 +171,7 @@ sudo pcs cluster start --all
 pcs property set stonith-enabled=false
 ```
 
-* ##### Ignore Quorum policy[?]()
+* ##### Ignore Quorum policy
 ```bash
 pcs property set no-quorum-policy=ignore
 ```
@@ -245,7 +245,6 @@ server {
 ```
 ---
 ##### Note:
-
 * [Apache2 SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04)
 * [Nginx as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-reverse-proxy-on-ubuntu-22-04)
 * [Apache2 as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-use-apache-http-server-as-reverse-proxy-using-mod_proxy-extension-ubuntu-20-04)
@@ -257,7 +256,7 @@ server {
 sudo pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=192.168.1.143 cidr_netmask=32 op monitor interval=30s
 ```
 
-##### Constraint:[?]()
+##### Constraint:
 ```bash
 sudo pcs constraint colocation add webserver with virtual_ip INFINITY
 ```
@@ -268,7 +267,7 @@ sudo pcs constraint order webserver then virtual_ip
 
 
 
-#### Authorize Host: [?]()
+#### Authorize Host: 
 Repeat this for all nodes(armadillium01,armadillium02,armadillium03,armadilliumN)
 
 Auth hosts with user hacluster and unified password for all nodes.
@@ -318,7 +317,7 @@ armadillium02: Unable to authenticate to armadillium02 - (HTTP error: 401)...
 sudo service pcsd start
 ```
 
-* PCSD Status: [?]()
+* PCSD Status:
 ```bash
 sudo pcs cluster status
 ```
@@ -329,7 +328,7 @@ sudo pcs cluster status
   * armadillium01: Online
 ```
 
-##### [PaceMaker](https://packages.debian.org/sid/pacemaker) cluster resource manager: [?]()
+##### [PaceMaker](https://packages.debian.org/sid/pacemaker) cluster resource manager:
 -Description:
 At its core, Pacemaker is a distributed finite state machine capable of co-ordinating the startup and recovery of inter-related services across a set of machines.
 
@@ -340,8 +339,7 @@ Pacemaker understands many different resource types (OCF, SYSV, systemd) and can
 sudo update-rc.d pacemaker defaults 20 01
 ```
 
-##### [UFW](https://packages.debian.org/sid/ufw) Firewall  [?]()
-
+##### [UFW](https://packages.debian.org/sid/ufw) Firewall
 -Description:
 The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
 
