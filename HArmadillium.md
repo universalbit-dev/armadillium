@@ -188,6 +188,12 @@ sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/ngi
 ```bash
 apt-get install nginx -y
 ```
+---
+
+* [Nginx SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-22-04)
+
+---
+
 
 * edit the Nginx default file:
 ```bash
@@ -240,12 +246,12 @@ server {
 
 ```
 ---
-* ##### Note:
+##### Note:
+
+* [Apache2 SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04)
 * [Nginx as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-reverse-proxy-on-ubuntu-22-04)
 * [Apache2 as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-use-apache-http-server-as-reverse-proxy-using-mod_proxy-extension-ubuntu-20-04)
 ---
-* [Nginx SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-22-04)
-* [Apache2 SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04)
 
 
 * Floating IP:
