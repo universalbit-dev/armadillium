@@ -1,7 +1,7 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 ##### [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)
 
-##### ThinClient Setup:[Armadillium](https://github.com/universalbit-dev/armadillium)
+### ThinClient Setup:[Armadillium](https://github.com/universalbit-dev/armadillium)
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/ecosystem_gran_canaria_edited.png" width="auto" />
 
 ### HArmadillium     
