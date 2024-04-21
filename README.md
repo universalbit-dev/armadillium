@@ -9,10 +9,14 @@ Create your Software, Application, WebPage,static and dynamic content.
 
 # Cluster [HArmadillium](https://github.com/universalbit-dev/armadillium/blob/main/HArmadillium.md)
 
-##### HARDWARE: [AMDVLK](https://github.com/universalbit-dev/AMDVLK)
-* N.4 ThinClient HPT610 : Cpu 1.6GHz ,1GB RAM ,AMD Palm Graphics,120GB SSD,Gigabit Ethernet
+##### HARDWARE: ThinClient examples
+* N.4 ThinClient HPT610 : [Hp ThinClient Specifications](https://support.hp.com/us-en/document/c03235347)
 XOR
-* N.4 ThinClient HPT630 :  
+* N.4 ThinClient HPT630 : [HP ThinClient Specifications](https://support.hp.com/us-en/document/c05240287) 
+
+-- [AMDVLK](https://github.com/universalbit-dev/AMDVLK) --
+
+
 
 ##### Debian Minimal Server Installation :[Debian Community](https://www.debian.org/)
 ##### [Debian 11] Minimal Server Installation :[Foss](https://www.fosslinux.com/49956/install-debian-11-minimal-server.htm)
