@@ -11,7 +11,6 @@ Create your Software, Application, WebPage,static and dynamic content.
 
 ##### HARDWARE: ThinClient examples
 * N.4 ThinClient HPT610 : [Hp ThinClient Specifications](https://support.hp.com/us-en/document/c03235347)
-XOR
 * N.4 ThinClient HPT630 : [HP ThinClient Specifications](https://support.hp.com/us-en/document/c05240287) 
 
 -- [AMDVLK](https://github.com/universalbit-dev/AMDVLK) --
