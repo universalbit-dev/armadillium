@@ -18,7 +18,6 @@ Create your Software, Application, WebPage,static and dynamic content.
 
 
 ##### Debian Minimal Server Installation :[Debian Community](https://www.debian.org/)
-##### [Debian 11] Minimal Server Installation :[Foss](https://www.fosslinux.com/49956/install-debian-11-minimal-server.htm)
 ##### [Debian 12](https://www.howtoforge.com/tutorial/debian-minimal-server/)
 ---
 
