@@ -23,18 +23,18 @@ Create your Software, Application, WebPage,static and dynamic content.
 
 ##### WebServer:
 * [Nginx](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/)
-* [Apache2](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-debian-10)[Debian 11]
+* [Apache2](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-debian-10)
 
 ---
 SSH connections [wiki](https://wiki.debian.org/SSH)
 ---
 
 ##### Basic Security (If needed,use this: [SELKS](https://github.com/StamusNetworks/SELKS))
-* [Ufw](https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29)       Firewall
-* [Havp](https://www.havp.org/)      Antivirus Scanner
-* [Haproxy](https://www.haproxy.org/)   LoadBalancer
-* [Fail2Ban](https://github.com/fail2ban/fail2ban)  DDos Protection
-* [Haveged](https://wiki.archlinux.org/title/Haveged#) (HAVEGED inspired algorithm has been included in the Linux kernel )
+* [Ufw](https://manpages.ubuntu.com/manpages/bionic/en/man8/ufw.8.html) -- [Ufw wiki](https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29)
+* [Havp](https://www.havp.org/) -- [Havp github repository:](https://github.com/HaveSec/HAVP)
+* [Haproxy](https://www.haproxy.org/) -- [Haproxy wiki]
+* [Fail2Ban](https://github.com/fail2ban/fail2ban) -- [Fail2ban wiki](https://en.wikipedia.org/wiki/Fail2ban)
+* [Haveged](https://wiki.archlinux.org/title/Haveged#) (Haveged inspired algorithm has been included in the Linux kernel )
 
 ```bash
 apt install ufw havp haproxy fail2ban
