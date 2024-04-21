@@ -32,8 +32,8 @@ SSH connections [wiki](https://wiki.debian.org/SSH)
 ##### Basic Security (If needed,use this: [SELKS](https://github.com/StamusNetworks/SELKS))
 * [Ufw](https://manpages.ubuntu.com/manpages/bionic/en/man8/ufw.8.html) -- [Ufw wiki](https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29)
 * [Havp](https://www.havp.org/) -- [Havp github repository:](https://github.com/HaveSec/HAVP)
-* [Haproxy](https://www.haproxy.org/) -- [Haproxy wiki]
-* [Fail2Ban](https://github.com/fail2ban/fail2ban) -- [Fail2ban wiki](https://en.wikipedia.org/wiki/Fail2ban)
+* [Haproxy](https://www.haproxy.org/) -- [Haproxy github repository:](https://github.com/haproxy/haproxy/)
+* [Fail2ban](https://github.com/fail2ban/fail2ban) -- [Fail2ban wiki](https://en.wikipedia.org/wiki/Fail2ban)
 * [Haveged](https://wiki.archlinux.org/title/Haveged#) (Haveged inspired algorithm has been included in the Linux kernel )
 
 ```bash
