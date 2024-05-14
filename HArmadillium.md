@@ -26,10 +26,12 @@ apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 * [Corosync,PCS,PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
 
 #### Setup Hosts File for all node.
+* edit host file on each node
 ```bash
 sudo nano /etc/hosts
 ```
-* ##### example [armadillium01](https://github.com/universalbit-dev/HArmadillium) host setup
+
+* ##### example01 [armadillium01](https://github.com/universalbit-dev/HArmadillium) host setup
 ```
 #
 192.168.1.144      armadillium01
@@ -39,8 +41,8 @@ sudo nano /etc/hosts
 127.0.0.1          localhost
 127.0.1.1          armadillium01.universalbit armadillium01
 # local-ip-address machinename
-
 ```
+
 * ##### example02 [armadillium02](https://github.com/universalbit-dev/HArmadillium) host setup
 ```
 #
@@ -51,7 +53,30 @@ sudo nano /etc/hosts
 127.0.0.1          localhost
 127.0.1.1          armadillium02.universalbit armadillium02
 # local-ip-address machinename
+```
 
+* ##### example03 [armadillium03](https://github.com/universalbit-dev/HArmadillium) host setup
+```
+#
+192.168.1.144      armadillium01
+192.168.1.145      armadillium02
+192.168.1.146      armadillium03
+192.168.1.147      armadillium04
+127.0.0.1          localhost
+127.0.1.1          armadillium03.universalbit armadillium03
+# local-ip-address machinename
+```
+
+* ##### example04 [armadillium04](https://github.com/universalbit-dev/HArmadillium) host setup
+```
+#
+192.168.1.144      armadillium01
+192.168.1.145      armadillium02
+192.168.1.146      armadillium03
+192.168.1.147      armadillium04
+127.0.0.1          localhost
+127.0.1.1          armadillium04.universalbit armadillium04
+# local-ip-address machinename
 ```
 
 
