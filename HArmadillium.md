@@ -125,7 +125,7 @@ cluster engine daemon and utilities
 ##### Corosync Configuration File:
 
 ```bash
-nano /etc/corosync/corosync.conf
+sudo nano /etc/corosync/corosync.conf
 ```
 
 ```bash
@@ -171,18 +171,16 @@ logging {
 ```
 
 * ##### Corosync-keygen Authorize
-
-  ##### armadillium01 : create corosync-keygen and secure copy corosync keygen to other nodes
-         * scp keygen to armadillium02
-         * scp keygen to armadillium03
-         * scp keugen to armadillium04
-
 * armadillium01:
 ```bash
-sudo corosync-keygen #armadillium01 key generate
-sudo scp /etc/corosync/authkey armadillium02@192.168.1.145:/tmp #armadillium02 copy keygen to node02
-sudo scp /etc/corosync/authkey armadillium03@192.168.1.146:/tmp #armadillium03 copy keygen to node03
-sudo scp /etc/corosync/authkey armadillium04@192.168.1.147:/tmp #armadillium04 copy keygen to node04
+#armadillium01 key generate
+sudo corosync-keygen
+#armadillium02 copy keygen to node02
+sudo scp /etc/corosync/authkey armadillium02@192.168.1.145:/tmp
+#armadillium03 copy keygen to node03
+sudo scp /etc/corosync/authkey armadillium03@192.168.1.146:/tmp
+#armadillium04 copy keygen to node04
+sudo scp /etc/corosync/authkey armadillium04@192.168.1.147:/tmp 
 ```
 
 * armadillium02:
