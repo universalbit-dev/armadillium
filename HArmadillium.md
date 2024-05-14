@@ -29,6 +29,7 @@ apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 ```bash
 sudo nano /etc/hosts
 ```
+<img src="" width="75%"></img>
 
 * ##### example01 [armadillium01](https://github.com/universalbit-dev/HArmadillium) host setup
 ```bash
