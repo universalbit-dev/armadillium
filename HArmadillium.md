@@ -173,10 +173,9 @@ logging {
 * ##### Corosync-keygen Authorize
 * armadillium01:
 ```bash
-#armadillium01 key generate
+#armadillium01 key generator
 sudo corosync-keygen
 ```
-<img src="" width="100%"></img>
 
 ```bash
 #armadillium02 copy keygen to node02
