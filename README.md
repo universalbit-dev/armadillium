@@ -4,7 +4,7 @@
 # [Armadillium](https://en.wikipedia.org/wiki/Thin_client) (ThinClient)
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/armadillidium.png" width="5%" />
 
-Development need a digital working environment for develop with or without limit.
+#### Development need a digital working environment for develop with or without limit.
 Create your Software, Application, WebPage,static and dynamic content.
 
 # Cluster [HArmadillium](https://github.com/universalbit-dev/armadillium/blob/main/HArmadillium.md)
@@ -41,7 +41,7 @@ SSH connections [wiki](https://wiki.debian.org/SSH)
 ```bash
 apt install ufw havp haproxy fail2ban
 ```
-Debian/Ubuntu distro:
+#### Debian/Ubuntu distro:
 #### [OpenCL](https://github.com/KhronosGroup/OpenCL-SDK) and [AMDVLK](https://github.com/universalbit-dev/AMDVLK)
 ```bash
 apt-get install libssl-dev libx11-dev libxcb1-dev x11proto-dri2-dev libxcb-dri3-dev libxcb-dri2-0-dev libxcb-present-dev libxshmfence-dev libxrandr-dev libwayland-dev ocl-icd-opencl-dev 
