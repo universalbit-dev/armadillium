@@ -15,10 +15,12 @@ Create your Software, Application, WebPage,static and dynamic content.
 
 -- [AMDVLK](https://github.com/universalbit-dev/AMDVLK) --
 
+##### [Debian 12](https://www.debian.org/)
+* [Debian Minimal Server](https://www.howtoforge.com/tutorial/debian-minimal-server/)
+##### [Ubuntu 24.04 LTS](https://ubuntu.com/download/desktop)
+* [Ubuntu Desktop](https://ubuntu.com/download/desktop#community)
 
-
-##### Debian Minimal Server Installation :[Debian Community](https://www.debian.org/)
-##### [Debian 12](https://www.howtoforge.com/tutorial/debian-minimal-server/)
+---
 ---
 
 ##### WebServer:
