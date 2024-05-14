@@ -1,6 +1,8 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/ecosystem_gran_canaria_edited.png" width="auto" />
 
+* also [mini pond](https://www.bbc.com/future/article/20240423-how-to-make-a-mini-wildlife-pond) is a good example
+
 # [Armadillium](https://en.wikipedia.org/wiki/Thin_client) (ThinClient)
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/armadillidium.png" width="5%" />
 
