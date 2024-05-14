@@ -4,6 +4,8 @@
 ### ThinClient Setup:[Armadillium](https://github.com/universalbit-dev/armadillium)
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/ecosystem_gran_canaria_edited.png" width="auto" />
 
+* #####  also [mini pond](https://www.bbc.com/future/article/20240423-how-to-make-a-mini-wildlife-pond) is a good example
+
 ### HArmadillium     
 * Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) [HP-T610]() Gnu/Linux Debian 11 [Bullseye](https://www.debian.org/releases/bullseye/).
 * Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) [HP-T630]() Gnu/Linux Debian 12 [BookWorm](https://www.debian.org/releases/bookworm/).
