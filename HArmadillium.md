@@ -78,6 +78,8 @@ sudo nano /etc/hosts
 # local-ip-address machinename
 ```
 
+---
+---
 
 ##### SSH
 connect to each node via terminal commands:
@@ -186,6 +188,8 @@ sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
+---
+---
 
 * ##### Create the pcmk file
 create pcmk file for all nodes:
@@ -201,6 +205,8 @@ service {
   ver: 1
 }
 ```
+---
+---
 
 * [PCS](https://packages.debian.org/buster/pcs)
 Pacemaker Configuration System
@@ -208,6 +214,7 @@ Pacemaker Configuration System
 pcs is a corosync and pacemaker configuration tool. It permits users to easily view, modify and create pacemaker based clusters.
 
 pcs also provides pcsd, which operates as a GUI and remote server for pcs. Together pcs and pcsd form the recommended configuration tool for use with pacemaker.
+
 
 * ##### PCS Setup Cluster
 ```bash
@@ -259,10 +266,10 @@ server {
     }
     
 upstream websocket {
-    server 192.168.1.144; #01
-    server 192.168.1.145; #02
-    server 192.168.1.146; #03
-    server 192.168.1.147; #04
+    server 192.168.1.144; #armadiilium 01
+    server 192.168.1.145; #armadillium 02
+    server 192.168.1.146; #armadillium 03
+    server 192.168.1.147; #armadillium 04
 }
 
 server {
@@ -290,6 +297,7 @@ server {
 }
 
 ```
+---
 ---
 ##### Note:
 * [Apache2 SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04)
@@ -330,7 +338,7 @@ sudo pcs host auth armadillium03
 username: hacluster
 password: same-password-for-all-nodes
 
-##### Repeat this command for all nodes (armadillium01,armadillium02,armadilliumN)
+##### Repeat this command for all nodes (armadillium01,armadillium02,armadillium03,armadillium04)
 ```bash
 pcs host auth armadillium03
 ```
@@ -345,8 +353,6 @@ armadillium04: Starting Cluster...
 armadillium01: Starting Cluster...
 armadillium02: Starting Cluster...
 ```
-
-
 ```bash
 sudo pcs cluster enable --all
 ```
@@ -374,6 +380,8 @@ sudo pcs cluster status
   * armadillium02: Online
   * armadillium01: Online
 ```
+---
+---
 
 ##### [PaceMaker](https://packages.debian.org/sid/pacemaker) cluster resource manager:
 -Description:
@@ -385,6 +393,8 @@ Pacemaker understands many different resource types (OCF, SYSV, systemd) and can
 ```bash
 sudo update-rc.d pacemaker defaults 20 01
 ```
+---
+---
 
 ##### [UFW](https://packages.debian.org/sid/ufw) Firewall
 -Description:
