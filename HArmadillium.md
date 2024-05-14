@@ -176,9 +176,7 @@ logging {
 #armadillium01 key generate
 sudo corosync-keygen
 ```
-<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/corosync-keygen.png" width="100%"></img>
-
-
+<img src="" width="100%"></img>
 
 ```bash
 #armadillium02 copy keygen to node02
