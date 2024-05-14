@@ -25,7 +25,6 @@ apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 
 * [Corosync,PCS,PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
 
-#### Setup Hosts File for all node.
 * edit host file on each node
 ```bash
 sudo nano /etc/hosts
