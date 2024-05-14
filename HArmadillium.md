@@ -15,8 +15,9 @@
 ##### [Debian 11 Minimal Server](https://www.howtoforge.com/tutorial/debian-11-bullseye-minimal-server/)
 ##### [Debian 12 Minimal Server](https://www.howtoforge.com/tutorial/debian-minimal-server/)
 ##### [Ubuntu 24.04 LTS](https://ubuntu.com/download/desktop)
------
-* Required Packages:
+---
+
+### Required Packages:
 
 ```bash
 apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
@@ -98,19 +99,30 @@ sudo nano /etc/hosts
 ---
 ---
 
-##### SSH
-connect to each node via terminal commands:
-example:
+##### SSH connection to communicate with all nodes
+
+* FROM armadillium01 machine connect TO armadillium02
 ```bash
-ssh armadillium01@192.168.1.144
+ssh armadillium02@192.168.1.145
 ```
 
-##### High Availability
+* connect TO armadillium03
+```bash
+ssh armadillium03@192.168.1.146
+```
 
-* [Corosync](https://packages.debian.org/sid/corosync)
-cluster engine daemon and utilities
+* connect TO armadillium04
+```bash
+ssh armadillium04@192.168.1.147
+```
+---
+---
 
-##### The Corosync Cluster Engine is a Group Communication System with additional features for implementing high availability within applications. The project provides four C Application Programming Interface features:
+#### High Availability
+
+* [Corosync](https://packages.debian.org/sid/corosync) cluster engine daemon and utilities
+##### The Corosync Cluster Engine is a Group Communication System with additional features for implementing high availability within applications. 
+##### The project provides four C Application Programming Interface features:
 
  * A closed process group communication model with virtual synchrony
    guarantees for creating replicated state machines.
@@ -122,12 +134,11 @@ cluster engine daemon and utilities
  * A quorum system that notifies applications when quorum is achieved
    or lost.
 
-##### Corosync Configuration File:
-
+#### Corosync Configuration File:
 ```bash
 sudo nano /etc/corosync/corosync.conf
 ```
-
+corosync configuration file:
 ```bash
 totem {
   version: 2
@@ -170,24 +181,30 @@ logging {
 }
 ```
 
-* ##### Corosync-keygen Authorize
-* armadillium01:
+---
+---
+
+#### Corosync-keygen Authorize
+* FROM armadillium01:
 ```bash
 #armadillium01 key generator
 sudo corosync-keygen
 ```
-
+* secure copy (ssh) keygen to each node /tmp directory: 
 ```bash
-#armadillium02 copy keygen to node02
+#copy keygen TO armadillium02
 sudo scp /etc/corosync/authkey armadillium02@192.168.1.145:/tmp
-#armadillium03 copy keygen to node03
+
+#copy keygen TO armadillium03
 sudo scp /etc/corosync/authkey armadillium03@192.168.1.146:/tmp
-#armadillium04 copy keygen to node04
+
+#copy keygen TO armadillium04
 sudo scp /etc/corosync/authkey armadillium04@192.168.1.147:/tmp 
 ```
 
-* armadillium02:
+* connect to armadillium02 and mv copied file to /etc/corosync directory
 ```bash
+ssh armadillium02@192.168.1.145
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
@@ -296,10 +313,10 @@ server {
     }
     
 upstream websocket {
-    server 192.168.1.144; #armadiilium 01
-    server 192.168.1.145; #armadillium 02
-    server 192.168.1.146; #armadillium 03
-    server 192.168.1.147; #armadillium 04
+    server 192.168.1.144;
+    server 192.168.1.145;
+    server 192.168.1.146;
+    server 192.168.1.147;
 }
 
 server {
@@ -329,6 +346,7 @@ server {
 ```
 ---
 ---
+
 ##### Note: // [][]
 * [Apache2 SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04)
 * [Nginx as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-reverse-proxy-on-ubuntu-22-04)
