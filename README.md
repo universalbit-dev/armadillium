@@ -29,9 +29,8 @@ Create your Software, Application, WebPage,static and dynamic content.
 * [Nginx](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/)
 * [Apache2](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-debian-10)
 
----
-SSH connections [wiki](https://wiki.debian.org/SSH)
----
+
+* SSH connections [wiki](https://wiki.debian.org/SSH)
 
 ##### Basic Security (If needed,use this: [SELKS](https://github.com/StamusNetworks/SELKS))
 * [Ufw](https://manpages.ubuntu.com/manpages/bionic/en/man8/ufw.8.html) -- [Ufw wiki](https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29)
@@ -43,6 +42,9 @@ SSH connections [wiki](https://wiki.debian.org/SSH)
 ```bash
 apt install ufw havp haproxy fail2ban
 ```
+---
+---
+
 ### Debian/Ubuntu distro: [GPUOpen-Drivers](https://github.com/GPUOpen-Drivers/AMDVLK)
 * [OpenCL](https://github.com/KhronosGroup/OpenCL-Guide/blob/main/chapters/getting_started_linux.md) 
 * [AMDVLK](https://github.com/GPUOpen-Drivers/AMDVLK)
@@ -50,7 +52,7 @@ apt install ufw havp haproxy fail2ban
 ```bash
 apt-get install libssl-dev libx11-dev libxcb1-dev x11proto-dri2-dev libxcb-dri3-dev libxcb-dri2-0-dev libxcb-present-dev libxshmfence-dev libxrandr-dev libwayland-dev ocl-icd-opencl-dev 
 ```
-###### amdvlk other [distro](https://github.com/GPUOpen-Drivers/AMDVLK?tab=readme-ov-file#install-dev-and-tools-packages)
+##### amdvlk other [distro](https://github.com/GPUOpen-Drivers/AMDVLK?tab=readme-ov-file#install-dev-and-tools-packages)
 
 ---
 
