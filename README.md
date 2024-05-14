@@ -43,8 +43,10 @@ SSH connections [wiki](https://wiki.debian.org/SSH)
 ```bash
 apt install ufw havp haproxy fail2ban
 ```
-#### Debian/Ubuntu distro:
-#### [OpenCL](https://github.com/KhronosGroup/OpenCL-SDK) and [AMDVLK](https://github.com/universalbit-dev/AMDVLK)
+### Debian/Ubuntu distro: [GPUOpen-Drivers](https://github.com/GPUOpen-Drivers/AMDVLK)
+* [OpenCL](https://github.com/KhronosGroup/OpenCL-Guide/blob/main/chapters/getting_started_linux.md) 
+* [AMDVLK](https://github.com/GPUOpen-Drivers/AMDVLK)
+
 ```bash
 apt-get install libssl-dev libx11-dev libxcb1-dev x11proto-dri2-dev libxcb-dri3-dev libxcb-dri2-0-dev libxcb-present-dev libxshmfence-dev libxrandr-dev libwayland-dev ocl-icd-opencl-dev 
 ```
