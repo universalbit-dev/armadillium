@@ -11,10 +11,10 @@
 * Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) [HP-T630]() Gnu/Linux Debian 12 [BookWorm](https://www.debian.org/releases/bookworm/).
 
 ---
-
+### Debian/Ubuntu:
 ##### [Debian 11 Minimal Server](https://www.howtoforge.com/tutorial/debian-11-bullseye-minimal-server/)
 ##### [Debian 12 Minimal Server](https://www.howtoforge.com/tutorial/debian-minimal-server/)
-
+##### [Ubuntu 24.04 LTS](https://ubuntu.com/download/desktop)
 -----
 * Required Packages:
 
