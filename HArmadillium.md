@@ -289,8 +289,8 @@ server {
     listen [::]:443 ssl;
     server_name 192.168.1.144;
     root /usr/share/nginx/html;
-    ssl_certificate /etc/nginx/ssl/nginx.crt;
-    ssl_certificate_key /etc/nginx/ssl/nginx.key;    
+    ssl_certificate /etc/nginx/ssl/host.cert;
+    ssl_certificate_key /etc/nginx/ssl/host.key;    
 
     location / {
             proxy_buffers 8 32k;
@@ -332,10 +332,8 @@ sudo pcs constraint colocation add webserver with virtual_ip INFINITY
 sudo pcs constraint order webserver then virtual_ip
 ```
 
-
-
 #### Authorize Host: 
-Repeat this for all nodes(armadillium01,armadillium02,armadillium03,armadilliumN)
+Repeat this for all nodes(armadillium01,armadillium02,armadillium03,armadillium04)
 
 Auth hosts with user hacluster and unified password for all nodes.
 
