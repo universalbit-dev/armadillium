@@ -243,6 +243,18 @@ apt-get install nginx -y
 ```
 
 * [Nginx SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-22-04)
+```bash
+sudo apt install openssl
+```
+* create self-signed certificate:
+```bash
+cd ~/HArmadillium/ssl/
+openssl genrsa 2048 > host.key
+chmod 400 host.key
+openssl req -new -x509 -nodes -sha256 -days 365 -key host.key -out host.cert -config distinguished.cnf
+cp host.cert /etc/nginx/ssl/
+cp host.key  /etc/nginx/ssl/
+```
 
 ---
 
@@ -299,7 +311,7 @@ server {
 ```
 ---
 ---
-##### Note:
+##### Note: // [][]
 * [Apache2 SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04)
 * [Nginx as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-reverse-proxy-on-ubuntu-22-04)
 * [Apache2 as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-use-apache-http-server-as-reverse-proxy-using-mod_proxy-extension-ubuntu-20-04)
