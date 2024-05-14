@@ -48,8 +48,6 @@ apt-get install libssl-dev libx11-dev libxcb1-dev x11proto-dri2-dev libxcb-dri3-
 
 ---
 
-#### [6to4](https://github.com/universalbit-dev/HArmadillium/blob/main/6to4.md) IPv6 Address Planning
-
 ##### Monitor server performance with 
 * [Netdata](https://www.netdata.cloud/) via browser:
 ```bash
