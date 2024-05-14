@@ -175,6 +175,12 @@ logging {
 ```bash
 #armadillium01 key generate
 sudo corosync-keygen
+```
+<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/corosync-keygen.png" width="100%"></img>
+
+
+
+```bash
 #armadillium02 copy keygen to node02
 sudo scp /etc/corosync/authkey armadillium02@192.168.1.145:/tmp
 #armadillium03 copy keygen to node03
