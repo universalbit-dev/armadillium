@@ -29,7 +29,6 @@ apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 ```bash
 sudo nano /etc/hosts
 ```
-<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/hosts.png" width="100%"></img>
 
 * ##### example01 [armadillium01](https://github.com/universalbit-dev/HArmadillium) host setup
 ```bash
@@ -45,6 +44,8 @@ sudo nano /etc/hosts
 127.0.1.1          armadillium01.universalbit armadillium01
 # local-ip-address machinename
 ```
+<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/hosts.png" width="100%"></img>
+
 
 * ##### example02 [armadillium02](https://github.com/universalbit-dev/HArmadillium) host setup
 ```bash
@@ -59,8 +60,8 @@ sudo nano /etc/hosts
 127.0.0.1          localhost
 127.0.1.1          armadillium02.universalbit armadillium02
 # local-ip-address machinename
-
 ```
+<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/hosts02.png" width="100%"></img>
 
 * ##### example03 [armadillium03](https://github.com/universalbit-dev/HArmadillium) host setup
 ```bash
@@ -75,8 +76,8 @@ sudo nano /etc/hosts
 127.0.0.1          localhost
 127.0.1.1          armadillium03.universalbit armadillium03
 # local-ip-address machinename
-
 ```
+<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/hosts03.png" width="100%"></img>
 
 * ##### example04 [armadillium04](https://github.com/universalbit-dev/HArmadillium) host setup
 ```bash
@@ -92,6 +93,7 @@ sudo nano /etc/hosts
 127.0.1.1          armadillium04.universalbit armadillium04
 # local-ip-address machinename
 ```
+<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/hosts04.png" width="100%"></img>
 
 ---
 ---
