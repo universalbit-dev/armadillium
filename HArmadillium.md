@@ -41,6 +41,18 @@ sudo nano /etc/hosts
 # local-ip-address machinename
 
 ```
+* ##### example02 [armadillium02](https://github.com/universalbit-dev/HArmadillium) host setup
+```
+#
+192.168.1.144      armadillium01
+192.168.1.145      armadillium02
+192.168.1.146      armadillium03
+192.168.1.147      armadillium04
+127.0.0.1          localhost
+127.0.1.1          armadillium02.universalbit armadillium02
+# local-ip-address machinename
+
+```
 
 
 ##### SSH
@@ -349,36 +361,19 @@ sudo update-rc.d pacemaker defaults 20 01
 -Description:
 The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
 
-Enable http/https traffic,corosync,pacemaker and pcs ports must be allowed.
-
-```bash
-sudo ufw allow http
-sudo ufw allow https
-```
+Enable corosync,pacemaker and pcs traffic.
 
 * Firewall Rules:
 ```bash
 ufw default allow outgoing
 ```
 
-* ##### allow nodes host ,enable corosync,pacemaker and pcs ports:
+* ##### Enable HA local area network :LAN [corosync pacemaker and pcs]
 ```bash
-sudo ufw allow from 192.168.1.143
 sudo ufw allow from 192.168.1.144
 sudo ufw allow from 192.168.1.145
 sudo ufw allow from 192.168.1.146
 sudo ufw allow from 192.168.1.147
-```
-
-* ##### allow port 2224 (Any)
-```bash
-sudo ufw allow 2224
-```
-
-```bash
-pcs        port: 2224
-pacemaker  port: 3121
-corosync   port: 5403-5404-5405
 ```
 
 * ##### Property List
