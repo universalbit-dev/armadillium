@@ -100,17 +100,21 @@ sudo nano /etc/hosts
 ---
 
 ##### SSH connection to communicate with all nodes
+Install required packages TO each node
 * FROM armadillium01 TO armadillium02
 ```bash
 ssh armadillium02@192.168.1.145
+sudo apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 ```
 * ssh connect TO armadillium03
 ```bash
 ssh armadillium03@192.168.1.146
+sudo apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 ```
 * ssh connect TO armadillium04
 ```bash
 ssh armadillium04@192.168.1.147
+sudo apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
 ```
 ---
 ---
