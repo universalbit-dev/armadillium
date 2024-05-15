@@ -131,7 +131,7 @@ ssh armadillium04@192.168.1.147
  * A quorum system that notifies applications when quorum is achieved
    or lost.
 
-#### Corosync Configuration File: repeat this to each node
+#### Corosync Configuration File: repeat this TO each node
 ```bash
 sudo nano /etc/corosync/corosync.conf
 ```
