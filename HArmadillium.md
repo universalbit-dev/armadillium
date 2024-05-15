@@ -11,8 +11,8 @@
 * [HP-T610](https://support.hp.com/us-en/document/c03235347)
 * [HP-T630](https://support.hp.com/us-en/document/c05240287) 
 
-##### [Gnu/Linux Debian 12 BookWorm](https://www.debian.org/releases/bookworm/)
-##### [Ubuntu 24.04 LTS](https://ubuntu.com/download/desktop)
+##### [Gnu/Linux Debian](https://www.debian.org/)
+##### [Ubuntu](https://ubuntu.com/)
 
 
 ### Hardware Wiring []
