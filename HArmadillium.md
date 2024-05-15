@@ -5,16 +5,22 @@
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/ecosystem_gran_canaria_edited.png" width="auto" />
 
 * #####  also [mini pond](https://www.bbc.com/future/article/20240423-how-to-make-a-mini-wildlife-pond) is a good example
+---
 
-### HArmadillium     
-* Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) [HP-T610]() Gnu/Linux Debian 11 [Bullseye](https://www.debian.org/releases/bullseye/).
-* Clustering [Thin Client](https://en.wikipedia.org/wiki/Thin_client) [HP-T630]() Gnu/Linux Debian 12 [BookWorm](https://www.debian.org/releases/bookworm/).
+### HArmadillium Debian/Ubuntu Operating System  
+Clustering Thin Client
+* [HP-T610](https://support.hp.com/us-en/document/c03235347)
+
+Clustering Thin Client
+* [HP-T630](https://support.hp.com/us-en/document/c05240287) 
+
+##### [Gnu/Linux Debian 12 BookWorm](https://www.debian.org/releases/bookworm/)
+##### [Ubuntu 24.04 LTS](https://ubuntu.com/download/desktop)
+
+
+### Hardware Wiring []
 
 ---
-### Debian/Ubuntu:
-##### [Debian 11 Minimal Server](https://www.howtoforge.com/tutorial/debian-11-bullseye-minimal-server/)
-##### [Debian 12 Minimal Server](https://www.howtoforge.com/tutorial/debian-minimal-server/)
-##### [Ubuntu 24.04 LTS](https://ubuntu.com/download/desktop)
 ---
 
 ### Required Packages:
