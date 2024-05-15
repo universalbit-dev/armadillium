@@ -329,7 +329,7 @@ server {
     }
 }
 ```
-* [nginx configuration files]()
+* [nginx configuration files](https://github.com/universalbit-dev/HArmadillium/tree/main/nginx)
 
 ---
 ---
