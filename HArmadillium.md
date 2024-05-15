@@ -134,7 +134,7 @@ ssh armadillium04@192.168.1.147
  * A quorum system that notifies applications when quorum is achieved
    or lost.
 
-#### Corosync Configuration File:
+#### Corosync Configuration File: repeat this to each node
 ```bash
 sudo nano /etc/corosync/corosync.conf
 ```
@@ -191,7 +191,7 @@ logging {
 sudo corosync-keygen
 ```
 
-* secure copy (ssh) authkey to each node in /tmp directory: 
+* secure copy (ssh) authkey FROM armadillium01 TO each node in /tmp directory: 
 ```bash
 sudo scp /etc/corosync/authkey armadillium02@192.168.1.145:/tmp
 #copy authkey TO armadillium03 /tmp directory
@@ -210,7 +210,7 @@ sudo chmod 400 /etc/corosync/authkey
 
 * connect TO armadillium03 and move authkey FROM /tmp directory TO /etc/corosync directory
 ```bash
-ssh armadillium02@192.168.1.145
+ssh armadillium02@192.168.1.146
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
@@ -218,6 +218,7 @@ sudo chmod 400 /etc/corosync/authkey
 
 * connect TO armadillium04 and move authkey FROM /tmp directory TO /etc/corosync directory
 ```bash
+ssh armadillium02@192.168.1.147
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
@@ -226,8 +227,7 @@ sudo chmod 400 /etc/corosync/authkey
 ---
 
 * ##### Create the pcmk file
-create pcmk file to each nodes:
-* armadillium01
+create this pcmk file to each nodes
 ```bash 
 sudo mkdir /etc/corosync/service.d
 sudo nano /etc/corosync/service.d/pcmk
@@ -238,48 +238,7 @@ service {
   name: pacemaker
   ver: 1
 }
-```
-* armadillium02
-```bash 
-ssh armadillium02@192.168.1.145
-sudo mkdir /etc/corosync/service.d
-sudo nano /etc/corosync/service.d/pcmk
-```
-* ##### add this
-```bash
-service {
-  name: pacemaker
-  ver: 1
-}
-```
-
-* armadillium03:
-```bash 
-ssh armadillium03@192.168.1.146
-sudo mkdir /etc/corosync/service.d
-sudo nano /etc/corosync/service.d/pcmk
-```
-* ##### add this
-```bash
-service {
-  name: pacemaker
-  ver: 1
-}
-```
-* armadillium04:
-```bash 
-ssh armadillium04@192.168.1.147
-sudo mkdir /etc/corosync/service.d
-sudo nano /etc/corosync/service.d/pcmk
-```
-* ##### add this
-```bash
-service {
-  name: pacemaker
-  ver: 1
-}
-```
-
+``` 
 ---
 ---
 
@@ -288,32 +247,28 @@ service {
 pcs is a corosync and pacemaker configuration tool. It permits users to easily view, modify and create pacemaker based clusters.
 pcs also provides pcsd, which operates as a GUI and remote server for pcs. Together pcs and pcsd form the recommended configuration tool for use with pacemaker.
 
-* ##### PCS Setup Cluster
-
-FROM armadillium01 :
+* ##### PCS Setup Cluster 
+ONLY armadillium01 :
 ```bash
 sudo pcs cluster setup HArmadillium armadillium01 armadillium02 armadillium03 armadillium04
 sudo pcs cluster start --all
 ```
-
 * ##### Disable STONITH 
 ```bash
 pcs property set stonith-enabled=false
 ```
-
 * ##### Ignore Quorum policy
 ```bash
 pcs property set no-quorum-policy=ignore
 ```
-
-##### [PCS Create Resources](https://www.golinuxcloud.com/create-cluster-resource-in-ha-cluster-examples/): TO each node
-* ##### Create WebServer Resource
+* ##### [PCS Create Resources](https://www.golinuxcloud.com/create-cluster-resource-in-ha-cluster-examples/): TO each node
+* ##### Create WebServer Resource TO each node
 ```bash
 sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/nginx.conf op monitor timeout="5s" interval="5s"
 ```
 ---
 ---
-
+##### Webserver
 * ##### Nginx as Reverse Proxy
 TO each node
 ```bash
@@ -333,7 +288,7 @@ cp host.cert /etc/nginx/ssl/
 cp host.key  /etc/nginx/ssl/
 ```
 
-* edit the Nginx default file:
+* edit the Nginx default file 
 ```bash
 nano /etc/nginx/sites-enabled/default
 ```
@@ -382,52 +337,40 @@ server {
             proxy_send_timeout 86400s;
     }
 }
-
 ```
+* [nginx configuration files]()
 
 ---
 ---
 
-##### Note: // [][]
-* [Apache2 SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04)
-* [Nginx as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-reverse-proxy-on-ubuntu-22-04)
-* [Apache2 as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-use-apache-http-server-as-reverse-proxy-using-mod_proxy-extension-ubuntu-20-04)
-
----
-* Floating IP:
+* ##### [PCS Create Resources](https://www.golinuxcloud.com/create-cluster-resource-in-ha-cluster-examples/): TO each node
+* ##### Create PCSFloating IP Resource: TO each node
 ```bash
 sudo pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=192.168.1.143 cidr_netmask=32 op monitor interval=30s
 ```
-
-##### Constraint:
+##### Constraint: TO each node
 ```bash
 sudo pcs constraint colocation add webserver with virtual_ip INFINITY
 ```
-
 ```bash
 sudo pcs constraint order webserver then virtual_ip
 ```
 
-#### Authorize Host: 
-```bash
-sudo pcs host auth armadillium03
-```
-* user:     hacluster 
-* password: use same password to each nodes
-
-user hacluster auto created when install pcs package.
-
-* repeat this command to each nodes:
+#### Authorize Host: TO each node
+FROM armadillium01:
 ```bash
 sudo pcs host auth armadillium01
 sudo pcs host auth armadillium02
 sudo pcs host auth armadillium03
 sudo pcs host auth armadillium04
 ```
-username: hacluster
-password: same-password-for-all-nodes
+* user:     hacluster 
+* password: use same password to each node
 
-* repeat this command to each nodes:
+note:
+* user hacluster auto created when install pcs package.
+
+* ##### Start and Enable all: TO each node
 ```bash
 sudo pcs cluster start --all
 sudo pcs cluster enable --all
@@ -435,7 +378,7 @@ sudo pcs cluster enable --all
 ---
 ---
 
-* Throubleshooter:
+* ##### Throubleshooter:
 ```
 **Error
 Warning: Unable to read the known-hosts file: No such file or directory: '/var/lib/pcsd/known-hosts'
@@ -444,13 +387,16 @@ armadillium01: Unable to authenticate to armadillium01 - (HTTP error: 401)...
 armadillium04: Unable to authenticate to armadillium04 - (HTTP error: 401)...
 armadillium02: Unable to authenticate to armadillium02 - (HTTP error: 401)...
 ```
-* cause: pcsd service not started
-fix this to each node
+
+* ##### cause: pcsd service not started
+fix to each node
 ```bash
+ssh armadillium02@10.0.2.145
 sudo service pcsd start
+sudo service pcsd status
 ```
 
-* PCSD Status:
+* ##### PCSD Status:
 ```bash
 sudo pcs cluster status
 ```
@@ -463,23 +409,23 @@ sudo pcs cluster status
 ---
 ---
 
-##### [PaceMaker](https://packages.debian.org/sid/pacemaker) cluster resource manager:
+##### [PaceMaker](https://packages.debian.org/sid/pacemaker) cluster Resource Manager:
 -Description:
 Pacemaker is a distributed finite state machine capable of co-ordinating the startup and recovery of inter-related services across a set of machines.
 Pacemaker understands many different resource types (OCF, SYSV, systemd) and can accurately model the relationships between them (colocation, ordering).
 
-##### Run Pacemaker after corosync service:
+##### Run Pacemaker after corosync service: TO each node
 ```bash
 sudo update-rc.d pacemaker defaults 20 01
 ```
+
 ---
 ---
 
-##### [UFW](https://packages.debian.org/sid/ufw) Firewall Rules
+##### [UFW](https://packages.debian.org/sid/ufw) Firewall Rules TO each node
 -Description:
 The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
 
-* ##### Enable HA local area network :LAN [corosync pacemaker and pcs] repeat this to each node
 ```bash
 sudo ufw allow from 192.168.1.144
 sudo ufw allow from 192.168.1.145
@@ -487,11 +433,12 @@ sudo ufw allow from 192.168.1.146
 sudo ufw allow from 192.168.1.147
 ```
 
-* ##### Property List repeat this to each node
+* ##### Property List TO each node
 ```bash
 sudo pcs property list
 ```
-##### example terminal output 
+
+##### Example Working Output: 
 ```bash
 Cluster Properties:
 cluster-infrastructure: corosync
@@ -501,8 +448,7 @@ have-watchdog: false
 no-quorum-policy: ignore
 stonith-enabled: false
 ```
-HACluster configured and ready to host something of amazing
-
+##### HACluster configured and ready to host something of amazing
 ---
 ---
 
