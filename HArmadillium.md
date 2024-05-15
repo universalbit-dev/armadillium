@@ -239,8 +239,7 @@ service {
 pcs is a corosync and pacemaker configuration tool. It permits users to easily view, modify and create pacemaker based clusters.
 pcs also provides pcsd, which operates as a GUI and remote server for pcs. Together pcs and pcsd form the recommended configuration tool for use with pacemaker.
 
-* ##### PCS Setup Cluster 
-ONLY armadillium01 :
+* ##### PCS Setup Cluster : TO each node
 ```bash
 sudo pcs cluster setup HArmadillium armadillium01 armadillium02 armadillium03 armadillium04
 sudo pcs cluster start --all
