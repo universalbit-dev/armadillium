@@ -237,7 +237,8 @@ service {
 * [PCS](https://packages.debian.org/buster/pcs) Pacemaker Configuration System
 -Description:
 pcs is a corosync and pacemaker configuration tool. It permits users to easily view, modify and create pacemaker based clusters.
-pcs also provides pcsd, which operates as a GUI and remote server for pcs. Together pcs and pcsd form the recommended configuration tool for use with pacemaker.
+pcs also provides pcsd, which operates as a GUI and remote server for PCS.
+Together PCS and PCSD form the recommended configuration tool for use with pacemaker.
 
 * ##### PCS Setup Cluster : TO each node
 ```bash
@@ -261,7 +262,7 @@ sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/ngi
 ---
 ##### Webserver
 * ##### Nginx as Reverse Proxy
-TO each node
+create ssl certificate TO each node
 ```bash
 sudo apt install nginx -y
 ```
@@ -343,6 +344,7 @@ sudo pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=192.168.1.143 cidr_
 ```bash
 sudo pcs constraint colocation add webserver with virtual_ip INFINITY
 ```
+
 ```bash
 sudo pcs constraint order webserver then virtual_ip
 ```
@@ -379,7 +381,7 @@ armadillium02: Unable to authenticate to armadillium02 - (HTTP error: 401)...
 ```
 
 * ##### cause: PCSD service not started
-fix TO each node
+* ##### fix: Start PCSD service TO each node
 ```bash
 ssh armadillium02@10.0.2.145
 sudo service pcsd start
