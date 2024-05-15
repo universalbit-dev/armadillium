@@ -219,8 +219,7 @@ sudo chmod 400 /etc/corosync/authkey
 ```
 ---
 ---
-* ##### Create the pcmk file
-create this pcmk file to each nodes
+* ##### Create PCMK file  : TO each node
 ```bash 
 sudo mkdir /etc/corosync/service.d
 sudo nano /etc/corosync/service.d/pcmk
