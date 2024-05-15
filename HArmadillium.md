@@ -188,7 +188,7 @@ logging {
 #armadillium01 key generator
 sudo corosync-keygen
 ```
-* secure copy (ssh) authkey FROM armadillium01 TO each node in /tmp directory: 
+* secure copy (ssh) authkey FROM armadillium01 TO each node : /tmp directory 
 ```bash
 sudo scp /etc/corosync/authkey armadillium02@192.168.1.145:/tmp
 #copy authkey TO armadillium03 /tmp directory
