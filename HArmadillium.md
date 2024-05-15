@@ -388,8 +388,8 @@ armadillium04: Unable to authenticate to armadillium04 - (HTTP error: 401)...
 armadillium02: Unable to authenticate to armadillium02 - (HTTP error: 401)...
 ```
 
-* ##### cause: pcsd service not started
-fix to each node
+* ##### cause: PCSD service not started
+fix TO each node
 ```bash
 ssh armadillium02@10.0.2.145
 sudo service pcsd start
@@ -408,7 +408,6 @@ sudo pcs cluster status
 ```
 ---
 ---
-
 ##### [PaceMaker](https://packages.debian.org/sid/pacemaker) cluster Resource Manager:
 -Description:
 Pacemaker is a distributed finite state machine capable of co-ordinating the startup and recovery of inter-related services across a set of machines.
@@ -418,7 +417,6 @@ Pacemaker understands many different resource types (OCF, SYSV, systemd) and can
 ```bash
 sudo update-rc.d pacemaker defaults 20 01
 ```
-
 ---
 ---
 
