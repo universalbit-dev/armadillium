@@ -180,17 +180,14 @@ logging {
   timestamp: on
 }
 ```
-
 ---
 ---
-
 #### Corosync-keygen Authorize
 * FROM armadillium01 create corosync key :
 ```bash
 #armadillium01 key generator
 sudo corosync-keygen
 ```
-
 * secure copy (ssh) authkey FROM armadillium01 TO each node in /tmp directory: 
 ```bash
 sudo scp /etc/corosync/authkey armadillium02@192.168.1.145:/tmp
@@ -199,7 +196,6 @@ sudo scp /etc/corosync/authkey armadillium03@192.168.1.146:/tmp
 #copy authkey TO armadillium04 /tmp directory
 sudo scp /etc/corosync/authkey armadillium04@192.168.1.147:/tmp 
 ```
-
 * connect TO armadillium02 and move authkey FROM /tmp directory TO /etc/corosync directory
 ```bash
 ssh armadillium02@192.168.1.145
@@ -207,25 +203,22 @@ sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
-
 * connect TO armadillium03 and move authkey FROM /tmp directory TO /etc/corosync directory
 ```bash
-ssh armadillium02@192.168.1.146
+ssh armadillium03@192.168.1.146
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
-
 * connect TO armadillium04 and move authkey FROM /tmp directory TO /etc/corosync directory
 ```bash
-ssh armadillium02@192.168.1.147
+ssh armadillium04@192.168.1.147
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
 ---
 ---
-
 * ##### Create the pcmk file
 create this pcmk file to each nodes
 ```bash 
@@ -241,7 +234,6 @@ service {
 ``` 
 ---
 ---
-
 * [PCS](https://packages.debian.org/buster/pcs) Pacemaker Configuration System
 -Description:
 pcs is a corosync and pacemaker configuration tool. It permits users to easily view, modify and create pacemaker based clusters.
