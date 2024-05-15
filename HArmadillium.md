@@ -359,7 +359,6 @@ sudo pcs constraint order webserver then virtual_ip
 #### Authorize Host: TO each node
 FROM armadillium01:
 ```bash
-sudo pcs host auth armadillium01
 sudo pcs host auth armadillium02
 sudo pcs host auth armadillium03
 sudo pcs host auth armadillium04
