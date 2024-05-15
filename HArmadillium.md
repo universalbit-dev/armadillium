@@ -100,18 +100,15 @@ sudo nano /etc/hosts
 ---
 
 ##### SSH connection to communicate with all nodes
-
-* FROM armadillium01 machine connect TO armadillium02
+* FROM armadillium01 TO armadillium02
 ```bash
 ssh armadillium02@192.168.1.145
 ```
-
-* connect TO armadillium03
+* ssh connect TO armadillium03
 ```bash
 ssh armadillium03@192.168.1.146
 ```
-
-* connect TO armadillium04
+* ssh connect TO armadillium04
 ```bash
 ssh armadillium04@192.168.1.147
 ```
