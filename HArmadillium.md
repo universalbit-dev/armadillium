@@ -185,24 +185,22 @@ logging {
 ---
 
 #### Corosync-keygen Authorize
-* FROM armadillium01:
+* FROM armadillium01 create corosync key :
 ```bash
 #armadillium01 key generator
 sudo corosync-keygen
 ```
-* secure copy (ssh) keygen to each node /tmp directory: 
+
+* secure copy (ssh) authkey to each node in /tmp directory: 
 ```bash
-#copy keygen TO armadillium02
 sudo scp /etc/corosync/authkey armadillium02@192.168.1.145:/tmp
-
-#copy keygen TO armadillium03
+#copy authkey TO armadillium03 /tmp directory
 sudo scp /etc/corosync/authkey armadillium03@192.168.1.146:/tmp
-
-#copy keygen TO armadillium04
+#copy authkey TO armadillium04 /tmp directory
 sudo scp /etc/corosync/authkey armadillium04@192.168.1.147:/tmp 
 ```
 
-* connect to armadillium02 and mv copied file to /etc/corosync directory
+* connect TO armadillium02 and move authkey FROM /tmp directory TO /etc/corosync directory
 ```bash
 ssh armadillium02@192.168.1.145
 sudo mv /tmp/authkey /etc/corosync
@@ -210,14 +208,15 @@ sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
 
-* armadillium03:
+* connect TO armadillium03 and move authkey FROM /tmp directory TO /etc/corosync directory
 ```bash
+ssh armadillium02@192.168.1.145
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
 
-* armadillium04:
+* connect TO armadillium04 and move authkey FROM /tmp directory TO /etc/corosync directory
 ```bash
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
@@ -227,35 +226,76 @@ sudo chmod 400 /etc/corosync/authkey
 ---
 
 * ##### Create the pcmk file
-create pcmk file for all nodes:
+create pcmk file to each nodes:
+* armadillium01
 ```bash 
 sudo mkdir /etc/corosync/service.d
 sudo nano /etc/corosync/service.d/pcmk
 ```
-
-* ##### add this lines of code
+* ##### add this
 ```bash
 service {
   name: pacemaker
   ver: 1
 }
 ```
+* armadillium02
+```bash 
+ssh armadillium02@192.168.1.145
+sudo mkdir /etc/corosync/service.d
+sudo nano /etc/corosync/service.d/pcmk
+```
+* ##### add this
+```bash
+service {
+  name: pacemaker
+  ver: 1
+}
+```
+
+* armadillium03:
+```bash 
+ssh armadillium03@192.168.1.146
+sudo mkdir /etc/corosync/service.d
+sudo nano /etc/corosync/service.d/pcmk
+```
+* ##### add this
+```bash
+service {
+  name: pacemaker
+  ver: 1
+}
+```
+* armadillium04:
+```bash 
+ssh armadillium04@192.168.1.147
+sudo mkdir /etc/corosync/service.d
+sudo nano /etc/corosync/service.d/pcmk
+```
+* ##### add this
+```bash
+service {
+  name: pacemaker
+  ver: 1
+}
+```
+
 ---
 ---
 
-* [PCS](https://packages.debian.org/buster/pcs)
-Pacemaker Configuration System
+* [PCS](https://packages.debian.org/buster/pcs) Pacemaker Configuration System
 -Description:
 pcs is a corosync and pacemaker configuration tool. It permits users to easily view, modify and create pacemaker based clusters.
-
 pcs also provides pcsd, which operates as a GUI and remote server for pcs. Together pcs and pcsd form the recommended configuration tool for use with pacemaker.
 
-
 * ##### PCS Setup Cluster
+
+FROM armadillium01 :
 ```bash
 sudo pcs cluster setup HArmadillium armadillium01 armadillium02 armadillium03 armadillium04
 sudo pcs cluster start --all
 ```
+
 * ##### Disable STONITH 
 ```bash
 pcs property set stonith-enabled=false
@@ -265,25 +305,27 @@ pcs property set stonith-enabled=false
 ```bash
 pcs property set no-quorum-policy=ignore
 ```
----
 
-##### [PCS Create Resources](https://www.golinuxcloud.com/create-cluster-resource-in-ha-cluster-examples/):
+##### [PCS Create Resources](https://www.golinuxcloud.com/create-cluster-resource-in-ha-cluster-examples/): TO each node
 * ##### Create WebServer Resource
 ```bash
 sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/nginx.conf op monitor timeout="5s" interval="5s"
 ```
-* Nginx as Reverse Proxy
-```bash
-apt-get install nginx -y
-```
+---
+---
 
-* [Nginx SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-22-04)
+* ##### Nginx as Reverse Proxy
+TO each node
+```bash
+sudo apt install nginx -y
+```
+* ##### [HTTPS](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-22-04)
+TO each node:
 ```bash
 sudo apt install openssl
 ```
 * create self-signed certificate:
 ```bash
-cd ~/HArmadillium/ssl/
 openssl genrsa 2048 > host.key
 chmod 400 host.key
 openssl req -new -x509 -nodes -sha256 -days 365 -key host.key -out host.cert -config distinguished.cnf
@@ -291,13 +333,11 @@ cp host.cert /etc/nginx/ssl/
 cp host.key  /etc/nginx/ssl/
 ```
 
----
-
-
 * edit the Nginx default file:
 ```bash
 nano /etc/nginx/sites-enabled/default
 ```
+* armadillium01 nginx configuration file:
 ```bash
 server {
 listen 80;
@@ -344,6 +384,7 @@ server {
 }
 
 ```
+
 ---
 ---
 
@@ -351,9 +392,8 @@ server {
 * [Apache2 SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04)
 * [Nginx as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-reverse-proxy-on-ubuntu-22-04)
 * [Apache2 as reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-use-apache-http-server-as-reverse-proxy-using-mod_proxy-extension-ubuntu-20-04)
+
 ---
-
-
 * Floating IP:
 ```bash
 sudo pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=192.168.1.143 cidr_netmask=32 op monitor interval=30s
@@ -369,49 +409,43 @@ sudo pcs constraint order webserver then virtual_ip
 ```
 
 #### Authorize Host: 
-Repeat this for all nodes(armadillium01,armadillium02,armadillium03,armadillium04)
-
-Auth hosts with user hacluster and unified password for all nodes.
-
-note: **Info
-user hacluster auto created when install pcs package.
-
-Auth node to known-hosts,repeat for all nodes
 ```bash
 sudo pcs host auth armadillium03
 ```
+* user:     hacluster 
+* password: use same password to each nodes
 
+user hacluster auto created when install pcs package.
+
+* repeat this command to each nodes:
+```bash
+sudo pcs host auth armadillium01
+sudo pcs host auth armadillium02
+sudo pcs host auth armadillium03
+sudo pcs host auth armadillium04
+```
 username: hacluster
 password: same-password-for-all-nodes
 
-##### Repeat this command for all nodes (armadillium01,armadillium02,armadillium03,armadillium04)
-```bash
-pcs host auth armadillium03
-```
-
+* repeat this command to each nodes:
 ```bash
 sudo pcs cluster start --all
-```
-##### ...
-```bash
-armadillium03: Starting Cluster...
-armadillium04: Starting Cluster...
-armadillium01: Starting Cluster...
-armadillium02: Starting Cluster...
-```
-```bash
 sudo pcs cluster enable --all
 ```
+---
+---
+
+* Throubleshooter:
 ```
-note: **Error
+**Error
 Warning: Unable to read the known-hosts file: No such file or directory: '/var/lib/pcsd/known-hosts'
 armadillium03: Unable to authenticate to armadillium03 - (HTTP error: 401)...
 armadillium01: Unable to authenticate to armadillium01 - (HTTP error: 401)...
 armadillium04: Unable to authenticate to armadillium04 - (HTTP error: 401)...
 armadillium02: Unable to authenticate to armadillium02 - (HTTP error: 401)...
 ```
-
-* ##### connect via ssh to armadillium03 and start pcsd service and repeat this for all nodes.
+* cause: pcsd service not started
+fix this to each node
 ```bash
 sudo service pcsd start
 ```
@@ -431,29 +465,21 @@ sudo pcs cluster status
 
 ##### [PaceMaker](https://packages.debian.org/sid/pacemaker) cluster resource manager:
 -Description:
-At its core, Pacemaker is a distributed finite state machine capable of co-ordinating the startup and recovery of inter-related services across a set of machines.
-
+Pacemaker is a distributed finite state machine capable of co-ordinating the startup and recovery of inter-related services across a set of machines.
 Pacemaker understands many different resource types (OCF, SYSV, systemd) and can accurately model the relationships between them (colocation, ordering).
 
-##### run pacemaker after corosync service.
+##### Run Pacemaker after corosync service:
 ```bash
 sudo update-rc.d pacemaker defaults 20 01
 ```
 ---
 ---
 
-##### [UFW](https://packages.debian.org/sid/ufw) Firewall
+##### [UFW](https://packages.debian.org/sid/ufw) Firewall Rules
 -Description:
 The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
 
-Enable corosync,pacemaker and pcs traffic.
-
-* Firewall Rules:
-```bash
-ufw default allow outgoing
-```
-
-* ##### Enable HA local area network :LAN [corosync pacemaker and pcs]
+* ##### Enable HA local area network :LAN [corosync pacemaker and pcs] repeat this to each node
 ```bash
 sudo ufw allow from 192.168.1.144
 sudo ufw allow from 192.168.1.145
@@ -461,11 +487,10 @@ sudo ufw allow from 192.168.1.146
 sudo ufw allow from 192.168.1.147
 ```
 
-* ##### Property List
+* ##### Property List repeat this to each node
 ```bash
 sudo pcs property list
 ```
-
 ##### example terminal output 
 ```bash
 Cluster Properties:
@@ -476,8 +501,11 @@ have-watchdog: false
 no-quorum-policy: ignore
 stonith-enabled: false
 ```
+HACluster configured and ready to host something of amazing
 
 ---
+---
+
 Resources:
 * [HA](https://wiki.debian.org/Debian-HA) 
 * [Debian-HA](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
@@ -491,4 +519,3 @@ Resources:
 * [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 * [NetWorkManager](https://wiki.debian.org/NetworkConfiguration)
 * [Hosts](https://wiki.debian.org/Hostname)
-
