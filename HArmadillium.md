@@ -8,10 +8,7 @@
 ---
 
 ### HArmadillium Debian/Ubuntu Operating System  
-Clustering Thin Client
 * [HP-T610](https://support.hp.com/us-en/document/c03235347)
-
-Clustering Thin Client
 * [HP-T630](https://support.hp.com/us-en/document/c05240287) 
 
 ##### [Gnu/Linux Debian 12 BookWorm](https://www.debian.org/releases/bookworm/)
