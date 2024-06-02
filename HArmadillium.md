@@ -3,8 +3,6 @@
 
 ### ThinClient Setup:[Armadillium](https://github.com/universalbit-dev/armadillium)
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/ecosystem_gran_canaria_edited.png" width="auto" />
-
-* #####  also [mini pond](https://www.bbc.com/future/article/20240423-how-to-make-a-mini-wildlife-pond) is a good example
 ---
 
 ### HArmadillium Debian/Ubuntu Operating System  
