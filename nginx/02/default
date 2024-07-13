@@ -1,27 +1,27 @@
 server {
 listen 80;
 listen [::]:80;
-server_name 192.168.1.145;
+server_name 192.168.1.142;
 return 301 https://$server_name$request_uri;
 }
 
 server {
-    server_name 192.168.1.145;
+    server_name 192.168.1.142;
     listen 8001;
     return 301 https://$host$request_uri;
     }
     
 upstream websocket {
+    server 192.168.1.141;
+    server 192.168.1.142;
+    server 192.168.1.143;
     server 192.168.1.144;
-    server 192.168.1.145;
-    server 192.168.1.146;
-    server 192.168.1.147;
 }
 
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
-    server_name 192.168.1.145;
+    server_name 192.168.1.142;
     root /usr/share/nginx/html;
     ssl_certificate /etc/nginx/ssl/host.cert;
     ssl_certificate_key /etc/nginx/ssl/host.key;    
