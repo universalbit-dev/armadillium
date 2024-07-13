@@ -35,13 +35,13 @@ sudo nano /etc/hosts
 * ##### example01 [armadillium01](https://github.com/universalbit-dev/HArmadillium) host setup
 ```bash
 #armadillium01
-192.168.1.144                   
+192.168.1.141                  
 #armadillium02
-192.168.1.145                   
+192.168.1.142                   
 #armadillium03
-192.168.1.146                   
+192.168.1.143                   
 #armadillium04
-192.168.1.147                   
+192.168.1.144                   
 127.0.0.1          localhost
 127.0.1.1          armadillium01.universalbit armadillium01
 # local-ip-address machinename
@@ -52,13 +52,13 @@ sudo nano /etc/hosts
 * ##### example02 [armadillium02](https://github.com/universalbit-dev/HArmadillium) host setup
 ```bash
 #armadillium01
-192.168.1.144                   
+192.168.1.141                   
 #armadillium02
-192.168.1.145                   
+192.168.1.142                   
 #armadillium03
-192.168.1.146                   
+192.168.1.143                   
 #armadillium04
-192.168.1.147                   
+192.168.1.144                   
 127.0.0.1          localhost
 127.0.1.1          armadillium02.universalbit armadillium02
 # local-ip-address machinename
@@ -68,13 +68,13 @@ sudo nano /etc/hosts
 * ##### example03 [armadillium03](https://github.com/universalbit-dev/HArmadillium) host setup
 ```bash
 #armadillium01
-192.168.1.144                   
+192.168.1.141                   
 #armadillium02
-192.168.1.145                   
+192.168.1.142                   
 #armadillium03
-192.168.1.146                   
+192.168.1.143                   
 #armadillium04
-192.168.1.147                   
+192.168.1.144                   
 127.0.0.1          localhost
 127.0.1.1          armadillium03.universalbit armadillium03
 # local-ip-address machinename
@@ -84,13 +84,13 @@ sudo nano /etc/hosts
 * ##### example04 [armadillium04](https://github.com/universalbit-dev/HArmadillium) host setup
 ```bash
 #armadillium01
-192.168.1.144                   
+192.168.1.141                   
 #armadillium02
-192.168.1.145                   
+192.168.1.142                   
 #armadillium03
-192.168.1.146                   
+192.168.1.143                   
 #armadillium04
-192.168.1.147                   
+192.168.1.144                   
 127.0.0.1          localhost
 127.0.1.1          armadillium04.universalbit armadillium04
 # local-ip-address machinename
@@ -104,18 +104,18 @@ sudo nano /etc/hosts
 Install required packages TO each node
 * FROM armadillium01 TO armadillium02
 ```bash
-ssh armadillium02@192.168.1.145
-sudo apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
+ssh armadillium02@192.168.1.142
+sudo apt install corosync pacemaker pcs ufw nginx haveged heartbeat
 ```
 * ssh connect TO armadillium03
 ```bash
-ssh armadillium03@192.168.1.146
-sudo apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
+ssh armadillium03@192.168.1.143
+sudo apt install corosync pacemaker pcs ufw nginx haveged heartbeat
 ```
 * ssh connect TO armadillium04
 ```bash
-ssh armadillium04@192.168.1.147
-sudo apt install corosync pacemaker pcs ufw apache2 nginx haveged heartbeat
+ssh armadillium04@192.168.1.144
+sudo apt install corosync pacemaker pcs ufw nginx haveged heartbeat
 ```
 ---
 ---
@@ -148,29 +148,29 @@ totem {
   transport: udpu
   interface {
    ringnumber: 0
-   bindnetaddr: 192.168.1.143
+   bindnetaddr: 192.168.1.140
    broadcast: yes
    mcastport: 5405
  }
 }
 nodelist {
   node {
-    ring0_addr: 192.168.1.144
+    ring0_addr: 192.168.1.141
     name: armadillium01
     nodeid: 1
   }
   node {
-    ring0_addr: 192.168.1.145
+    ring0_addr: 192.168.1.142
     name: armadillium02
     nodeid: 2
   }
   node {
-    ring0_addr: 192.168.1.146
+    ring0_addr: 192.168.1.143
     name: armadillium03
     nodeid: 3
   }
   node {
-    ring0_addr: 192.168.1.147
+    ring0_addr: 192.168.1.144
     name: armadillium04
     nodeid: 4
   }
@@ -192,29 +192,29 @@ sudo corosync-keygen
 ```
 * secure copy (ssh) authkey FROM armadillium01 TO each node : /tmp directory 
 ```bash
-sudo scp /etc/corosync/authkey armadillium02@192.168.1.145:/tmp
+sudo scp /etc/corosync/authkey armadillium02@192.168.1.142:/tmp
 #copy authkey TO armadillium03 /tmp directory
-sudo scp /etc/corosync/authkey armadillium03@192.168.1.146:/tmp
+sudo scp /etc/corosync/authkey armadillium03@192.168.1.143:/tmp
 #copy authkey TO armadillium04 /tmp directory
-sudo scp /etc/corosync/authkey armadillium04@192.168.1.147:/tmp 
+sudo scp /etc/corosync/authkey armadillium04@192.168.1.144:/tmp 
 ```
 * connect TO armadillium02 and move authkey FROM /tmp directory TO /etc/corosync directory
 ```bash
-ssh armadillium02@192.168.1.145
+ssh armadillium02@192.168.1.142
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
 * connect TO armadillium03 and move authkey FROM /tmp directory TO /etc/corosync directory
 ```bash
-ssh armadillium03@192.168.1.146
+ssh armadillium03@192.168.1.143
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
 * connect TO armadillium04 and move authkey FROM /tmp directory TO /etc/corosync directory
 ```bash
-ssh armadillium04@192.168.1.147
+ssh armadillium04@192.168.1.144
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
@@ -290,27 +290,27 @@ nano /etc/nginx/sites-enabled/default
 server {
 listen 80;
 listen [::]:80;
-server_name 192.168.1.144;
+server_name 192.168.1.141;
 return 301 https://$server_name$request_uri;
 }
 
 server {
-    server_name 192.168.1.144;
+    server_name 192.168.1.141;
     listen 8001;
     return 301 https://$host$request_uri;
     }
     
 upstream websocket {
+    server 192.168.1.141;
+    server 192.168.1.142;
+    server 192.168.1.143;
     server 192.168.1.144;
-    server 192.168.1.145;
-    server 192.168.1.146;
-    server 192.168.1.147;
 }
 
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
-    server_name 192.168.1.144;
+    server_name 192.168.1.141;
     root /usr/share/nginx/html;
     ssl_certificate /etc/nginx/ssl/host.cert;
     ssl_certificate_key /etc/nginx/ssl/host.key;    
@@ -339,7 +339,7 @@ server {
 * ##### [PCS Create Resources](https://www.golinuxcloud.com/create-cluster-resource-in-ha-cluster-examples/): TO each node
 * ##### Create PCSFloating IP Resource: TO each node
 ```bash
-sudo pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=192.168.1.143 cidr_netmask=32 op monitor interval=30s
+sudo pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=192.168.1.140 cidr_netmask=32 op monitor interval=30s
 ```
 ##### Constraint: TO each node
 ```bash
@@ -384,7 +384,7 @@ armadillium02: Unable to authenticate to armadillium02 - (HTTP error: 401)...
 * ##### cause: PCSD service not started
 * ##### fix: Start PCSD service TO each node
 ```bash
-ssh armadillium02@10.0.2.145
+ssh armadillium02@10.0.2.142
 sudo service pcsd start
 sudo service pcsd status
 ```
@@ -418,10 +418,10 @@ sudo update-rc.d pacemaker defaults 20 01
 The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
 
 ```bash
+sudo ufw allow from 192.168.1.141
+sudo ufw allow from 192.168.1.142
+sudo ufw allow from 192.168.1.143
 sudo ufw allow from 192.168.1.144
-sudo ufw allow from 192.168.1.145
-sudo ufw allow from 192.168.1.146
-sudo ufw allow from 192.168.1.147
 ```
 
 * ##### Property List TO each node
