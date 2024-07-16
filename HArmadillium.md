@@ -18,12 +18,13 @@
 ---
 ---
 
+
 ### Required Packages:
 
 ```bash
-apt install corosync pacemaker pcs ufw nginx haveged heartbeat
+#[Ubuntu 24.04 LTS Noble]
+sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat
 ```
-[heartbeat](https://www.digitalocean.com/community/tutorials/how-to-create-a-high-availability-setup-with-heartbeat-and-reserved-ips-on-ubuntu-16-04)
 
 * [Corosync,PCS,PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
 
