@@ -11,6 +11,7 @@
 
 ##### [Gnu/Linux Debian](https://www.debian.org/)
 ##### [Ubuntu](https://ubuntu.com/)
+<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/images/software_repositories.png" width="auto"></img>
 
 
 ### Hardware Wiring []
