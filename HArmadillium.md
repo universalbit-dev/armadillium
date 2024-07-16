@@ -7,10 +7,10 @@
 
 ## [Introduction to High Availability](https://ubuntu.com/server/docs/introduction-to-high-availability)
 
-### HArmadillium operative system: [Debian](https://www.debian.org/)/[Ubuntu](https://ubuntu.com/)
+### HArmadillium 
 Hardware:
-* [HP-T610 Thin Client Product Specifications](https://support.hp.com/us-en/document/c03235347)
-* [HP-T630 Thin Client Product Specifications](https://support.hp.com/us-en/document/c05240287)
+* [HP-T610 Thin Client Product Specifications](https://support.hp.com/us-en/document/c03235347) operative system: [Debian](https://www.debian.org/)
+* [HP-T630 Thin Client Product Specifications](https://support.hp.com/us-en/document/c05240287) operative system: [Ubuntu](https://ubuntu.com/)
 
 Required:Check ubuntu repository are enabled
 #[Ubuntu 24.04 LTS Noble] 
