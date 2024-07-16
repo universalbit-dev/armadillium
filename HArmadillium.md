@@ -1,16 +1,19 @@
-##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
-##### [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)
-
-### ThinClient Setup:[Armadillium](https://github.com/universalbit-dev/armadillium)
+* [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
+* [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)
+* [ThinClient] Setup:[Armadillium](https://github.com/universalbit-dev/armadillium)
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/ecosystem_gran_canaria_edited.png" width="auto" />
+
 ---
 
-### HArmadillium Debian/Ubuntu Operating System  
-* [HP-T610](https://support.hp.com/us-en/document/c03235347)
-* [HP-T630](https://support.hp.com/us-en/document/c05240287) 
+## [Introduction to High Availability](https://ubuntu.com/server/docs/introduction-to-high-availability)
 
-##### [Gnu/Linux Debian](https://www.debian.org/)
-##### [Ubuntu](https://ubuntu.com/)
+### HArmadillium operative system: [Debian](https://www.debian.org/)/[Ubuntu](https://ubuntu.com/)
+Hardware:
+* [HP-T610 Thin Client Product Specifications](https://support.hp.com/us-en/document/c03235347)
+* [HP-T630 Thin Client Product Specifications](https://support.hp.com/us-en/document/c05240287)
+
+Required:Check ubuntu repository are enabled
+#[Ubuntu 24.04 LTS Noble] 
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/images/software_repositories.png" width="auto"></img>
 
 
