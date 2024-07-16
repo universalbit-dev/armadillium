@@ -259,6 +259,8 @@ pcs property set no-quorum-policy=ignore
 ```bash
 sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/nginx.conf op monitor timeout="5s" interval="5s"
 ```
+### ClusterLabs [Resource Agents](https://github.com/ClusterLabs/resource-agents)
+
 ---
 ---
 ##### Webserver
