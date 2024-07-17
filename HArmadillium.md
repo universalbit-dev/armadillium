@@ -20,9 +20,10 @@ Required:Check ubuntu repository are enabled
 ### Hardware Wiring []
 
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/images/HArmadillium.jpg" width="auto" />
+note: [ipfire?](https://www.ipfire.org/)
+
 
 ---
-note: [ipfire?](https://www.ipfire.org/)
 ---
 
 
