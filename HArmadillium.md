@@ -346,9 +346,13 @@ server {
     }
 }
 ```
-* [nginx configuration files](https://github.com/universalbit-dev/HArmadillium/tree/main/nginx)
+#### WebServer Resource
+* ### [nginx configuration files](https://github.com/universalbit-dev/HArmadillium/tree/main/nginx)
+  * [01](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/01/default)
+  * [02](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/02/default)
+  * [03](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default)
+  * [04](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default)
 
----
 ---
 
 * ##### [PCS Create Resources](https://www.golinuxcloud.com/create-cluster-resource-in-ha-cluster-examples/): TO each node
