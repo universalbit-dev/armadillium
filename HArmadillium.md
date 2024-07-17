@@ -37,14 +37,14 @@ sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw ngi
 ---
 
 ###### Overview:
-* [Host setup](##Host)
-* [SSH connections](##SSH)
-* [Corosync](##Corosync)
-* [PCMK file](##PCMK)
-* [PCS Setup](##PCS)
-* [WebServer](##WebServer)
-* [PaceMaker](##PaceMaker)
-* [Firewall UFW](##UFW)
+* [Host setup](#Host)
+* [SSH connections](#SSH)
+* [Corosync](#Corosync)
+* [PCMK file](#PCMK)
+* [PCS Setup](#PCS)
+* [WebServer](#WebServer)
+* [PaceMaker](#PaceMaker)
+* [Firewall UFW](#UFW)
 
 Getting <strong>Wiki</strong>:
 * [Corosync-PCS-PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
