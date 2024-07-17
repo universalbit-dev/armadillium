@@ -249,20 +249,6 @@ sudo chmod 400 /etc/corosync/authkey
 ```
 ---
 ---
-* ##### Create PCMK file  : TO each node
-```bash 
-sudo mkdir /etc/corosync/service.d
-sudo nano /etc/corosync/service.d/pcmk
-```
-* ##### add this
-```bash
-service {
-  name: pacemaker
-  ver: 1
-}
-``` 
----
----
 ## PCS
 * [PCS](https://packages.debian.org/buster/pcs) Pacemaker Configuration System
 -Description:
@@ -324,7 +310,19 @@ note:
 sudo pcs cluster start --all
 sudo pcs cluster enable --all
 ```
-
+## PCMK
+* ##### Create PCMK file  : TO each node
+```bash 
+sudo mkdir /etc/corosync/service.d
+sudo nano /etc/corosync/service.d/pcmk
+```
+* ##### add this
+```bash
+service {
+  name: pacemaker
+  ver: 1
+}
+```
 ---
 ## Webserver
 * ##### Nginx as Reverse Proxy
@@ -402,9 +400,7 @@ server {
   * [02](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/02/default)
   * [03](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default)
   * [04](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default)
-
 ---
-
 
 ---
 
@@ -438,6 +434,7 @@ sudo pcs cluster status
 ```
 ---
 ---
+## Pacemaker
 ## PaceMaker cluster Resource Manager:
 -Description:
 Pacemaker is a distributed finite state machine capable of co-ordinating the startup and recovery of inter-related services across a set of machines.
@@ -449,7 +446,7 @@ sudo update-rc.d pacemaker defaults 20 01
 ```
 ---
 ---
-
+## UFW
 ## UFW Firewall Rules TO each node
 -Description:
 The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
