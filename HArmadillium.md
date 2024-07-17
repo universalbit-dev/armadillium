@@ -109,18 +109,18 @@ sudo nano /etc/hosts
 ---
 
 ##### SSH connection to communicate with all nodes
-Install required packages TO each node
-* FROM armadillium01 TO armadillium02
+Install required packages <srong>TO</strong> each node and Check ubuntu repository are enabled
+* <strong>FROM</strong> armadillium01 <strong>TO</strong> armadillium02
 ```bash
 ssh armadillium02@192.168.1.142
 sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat
 ```
-* ssh connect TO armadillium03
+* ssh connect <strong>TO</strong> armadillium03
 ```bash
 ssh armadillium03@192.168.1.143
 sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat
 ```
-* ssh connect TO armadillium04
+* ssh connect <strong>TO</strong> armadillium04
 ```bash
 ssh armadillium04@192.168.1.144
 sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat
