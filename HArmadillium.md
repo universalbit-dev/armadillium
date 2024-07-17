@@ -189,6 +189,10 @@ logging {
   to_syslog: yes
   timestamp: on
 }
+service {
+  name: pacemaker
+  ver: 1
+}
 ```
 ---
 ---
