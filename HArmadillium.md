@@ -51,7 +51,7 @@ Getting <strong>Wiki</strong>:
 
 
 
-##Host
+## Host
 * edit host file TO each node
 ```bash
 sudo nano /etc/hosts
