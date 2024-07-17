@@ -351,6 +351,7 @@ server {
 * ##### Create PCSFloating IP Resource: TO each node
 ```bash
 sudo pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=192.168.1.140 cidr_netmask=32 op monitor interval=30s
+#crm configure primitive virtual_ip ocf:heartbeat:IPaddr2 params ip="192.168.1.140" cidr_netmask="32" op monitor interval="10s" meta migration-threshold="10"
 ```
 ##### Constraint: TO each node
 ```bash
@@ -361,7 +362,7 @@ sudo pcs constraint colocation add webserver with virtual_ip INFINITY
 sudo pcs constraint order webserver then virtual_ip
 ```
 
-#### Authorize Host: TO each node
+#### PCS AUTH authorize host(TO each node)
 FROM armadillium01:
 ```bash
 sudo pcs host auth armadillium02
@@ -374,7 +375,7 @@ sudo pcs host auth armadillium04
 note:
 * user hacluster auto created when install pcs package.
 
-* ##### Start and Enable all: TO each node
+* ##### Start PCS (TO each node)
 ```bash
 sudo pcs cluster start --all
 sudo pcs cluster enable --all
