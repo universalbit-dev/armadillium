@@ -111,7 +111,7 @@ sudo nano /etc/hosts
 ---
 
 ##### SSH connection to communicate with all nodes
-Install required packages <srong>TO</strong> each node and Check ubuntu repository are enabled
+Install required packages <srong>TO</strong> each node and <strong>Check ubuntu repository are enabled</strong>
 * <strong>FROM</strong> armadillium01 <strong>TO</strong> armadillium02
 ```bash
 ssh armadillium02@192.168.1.142
