@@ -394,7 +394,7 @@ server {
     }
 }
 ```
-#### WebServer Resource
+#### WebServer Resources
 * ### [Nginx configuration files](https://github.com/universalbit-dev/HArmadillium/tree/main/nginx)
   * [01](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/01/default)
   * [02](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/02/default)
@@ -435,7 +435,7 @@ sudo pcs cluster status
 ---
 ---
 ## Pacemaker
-## PaceMaker cluster Resource Manager:
+## Cluster Resource Manager:
 -Description:
 Pacemaker is a distributed finite state machine capable of co-ordinating the startup and recovery of inter-related services across a set of machines.
 Pacemaker understands many different resource types (OCF, SYSV, systemd) and can accurately model the relationships between them (colocation, ordering).
@@ -447,7 +447,7 @@ sudo update-rc.d pacemaker defaults 20 01
 ---
 ---
 ## UFW
-## UFW Firewall Rules TO each node
+## Firewall Rules TO each node
 -Description:
 The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
 
