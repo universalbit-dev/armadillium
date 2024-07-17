@@ -265,7 +265,7 @@ pcs property set no-quorum-policy=ignore
 * ##### [PCS Create Resources](https://www.golinuxcloud.com/create-cluster-resource-in-ha-cluster-examples/): TO each node
 * ##### Create WebServer Resource TO each node
 ```bash
-sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/nginx.conf op monitor timeout="5s" interval="5s"
+### [under review]sudo pcs resource create webserver ocf:heartbeat:nginx configfile=/etc/nginx/nginx.conf op monitor timeout="5s" interval="5s"
 ```
 ### ClusterLabs [Resource Agents](https://github.com/ClusterLabs/resource-agents)
 
