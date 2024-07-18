@@ -44,9 +44,6 @@ make test
 sudo make install
 ```
 
-
-
-
 ### High Availability Required Packages:
 
 ```bash
@@ -69,7 +66,18 @@ sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw ngi
 Getting <strong>Wiki</strong>:
 * [Corosync-PCS-PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
 
+## UFW
+## Firewall Rules TO each node
+-Description:
+The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
 
+```bash
+sudo ufw allow from 192.168.1.141
+sudo ufw allow from 192.168.1.142
+sudo ufw allow from 192.168.1.143
+sudo ufw allow from 192.168.1.144
+sudo ufw allow ssh
+```
 
 ## Host
 * edit host file <strong>TO</strong> each node
@@ -417,18 +425,6 @@ Pacemaker understands many different resource types (OCF, SYSV, systemd) and can
 sudo update-rc.d pacemaker defaults 20 01
 ```
 ---
----
-## UFW
-## Firewall Rules TO each node
--Description:
-The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
-
-```bash
-sudo ufw allow from 192.168.1.141
-sudo ufw allow from 192.168.1.142
-sudo ufw allow from 192.168.1.143
-sudo ufw allow from 192.168.1.144
-```
 
 * ##### Property List TO each node
 ```bash
