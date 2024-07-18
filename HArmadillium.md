@@ -12,13 +12,13 @@ Hardware:
 * [HP-T610 Thin Client Product Specifications](https://support.hp.com/us-en/document/c03235347) 
 * [HP-T630 Thin Client Product Specifications](https://support.hp.com/us-en/document/c05240287) 
 
-Required:Check ubuntu repository are enabled
+note: [certified hardware](https://ubuntu.com/certified)
+
+Required:Check <strong>ubuntu repository</strong> are enabled
 #[Ubuntu 24.04 LTS Noble] 
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/images/software_repositories.png" width="auto"></img>
 
-
-### Hardware Wiring []
-
+### Wiring
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/images/HArmadillium.jpg" width="auto" />
 
 note: [ipfire](https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/readme.md)
