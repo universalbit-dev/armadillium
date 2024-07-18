@@ -87,10 +87,11 @@ sudo nano /etc/hosts
 127.0.1.1          armadillium01.universalbit armadillium01
 # local-ip-address machinename
 ```
-* ##### [armadillium01]() host setup
-* ##### [armadillium02]() host setup
-* ##### [armadillium03]() host setup
-* ##### [armadillium04]() host setup
+host setup
+* ##### [armadillium01]() 
+* ##### [armadillium02]()
+* ##### [armadillium03]()
+* ##### [armadillium04]()
 
 ---
 ## SSH
