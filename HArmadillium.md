@@ -26,6 +26,15 @@ note: [ipfire](https://github.com/universalbit-dev/universalbit-dev/blob/main/ip
 
 ---
 ---
+### [Python](https://www.python.org/) Note:
+Download and Compile Python3 from source: [Compiling Software](https://help.ubuntu.com/community/CompilingSoftware)
+[Python3](https://www.python.org/downloads/)
+```bash
+./configure
+make
+make test
+sudo make install
+```
 
 
 ### Required Packages:
