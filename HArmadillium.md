@@ -23,11 +23,19 @@ Required:Check ubuntu repository are enabled
 
 note: [ipfire](https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/readme.md)
 
+---
+---
+### [Python3](https://www.python.org/) 
+Note:
 
----
----
-### [Python](https://www.python.org/) Note:
-Download and Compile Python3 from source: [Compiling Software](https://help.ubuntu.com/community/CompilingSoftware)
+--Deadsnakes PPA has already updated its support for Ubuntu 24.04 (Noble)
+```bash
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.11
+```
+
+OR Download and Compile Python3 from source: [Compiling Software](https://help.ubuntu.com/community/CompilingSoftware)
 [Python3](https://www.python.org/downloads/)
 ```bash
 ./configure
@@ -35,6 +43,8 @@ make
 make test
 sudo make install
 ```
+
+
 
 
 ### High Availability Required Packages:
