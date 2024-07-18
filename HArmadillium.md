@@ -14,7 +14,8 @@ Hardware:
 
 note: [certified hardware](https://ubuntu.com/certified)
 
-Required:Check <strong>ubuntu repository</strong>
+##### ubuntu
+Required:<strong>ubuntu repository</strong>
 #[Ubuntu 24.04 LTS Noble] 
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/images/software_repositories.png" width="auto"></img>
 
@@ -44,8 +45,6 @@ sudo make install
 ```
 
 ### High Availability Required Packages:
-
-#01
 ```bash
 #[Ubuntu 24.04 LTS Noble]
 sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat openssh-server
@@ -72,6 +71,7 @@ Getting <strong>Wiki</strong>:
 The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
 
 ```bash
+#01 #02 #03 #04
 sudo ufw allow from 192.168.1.141
 sudo ufw allow from 192.168.1.142
 sudo ufw allow from 192.168.1.143
@@ -84,6 +84,7 @@ sudo ufw allow ssh
 ```bash
 sudo nano /etc/hosts
 ```
+#01
 armadillium01 host
 ```bash
 127.0.0.1       localhost
@@ -101,26 +102,29 @@ ff02::2 ip6-allrouters
 192.168.1.144 armadillium04
 ```
 host setup
-* ##### [armadillium01](https://github.com/universalbit-dev/HArmadillium/blob/main/host/01.md) -- [armadillium02](https://github.com/universalbit-dev/HArmadillium/blob/main/host/02.md) -- [armadillium03](https://github.com/universalbit-dev/HArmadillium/blob/main/host/03.md) -- [armadillium04](https://github.com/universalbit-dev/HArmadillium/blob/main/host/04.md)
+* ##### [#01](https://github.com/universalbit-dev/HArmadillium/blob/main/host/01.md) -- [#02](https://github.com/universalbit-dev/HArmadillium/blob/main/host/02.md) -- [#03](https://github.com/universalbit-dev/HArmadillium/blob/main/host/03.md) -- [#04](https://github.com/universalbit-dev/HArmadillium/blob/main/host/04.md)
 
 ---
 ## SSH
 ##### SSH connection to communicate with all nodes
-Install required packages <srong>TO</strong> each node and <strong>Check ubuntu repository are enabled</strong>
+Install required packages <srong>TO</strong> each node and <strong>Check [ubuntu repository](#ubuntu)</strong>
 * <strong>FROM</strong> armadillium01 <strong>TO</strong> armadillium02
 ```bash
+#02
 ssh armadillium02@192.168.1.142
-sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat
+sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat openssh-server
 ```
-* ssh connect <strong>TO</strong> armadillium03
+* <strong>FROM</strong> armadillium01 <strong>TO</strong> armadillium03
 ```bash
+#03
 ssh armadillium03@192.168.1.143
-sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat
+sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat openssh-server
 ```
-* ssh connect <strong>TO</strong> armadillium04
+* <strong>FROM</strong> armadillium01 <strong>TO</strong> armadillium04
 ```bash
+#04
 ssh armadillium04@192.168.1.144
-sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat
+sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat openssh-server
 ```
 ---
 ---
