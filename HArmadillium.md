@@ -14,7 +14,7 @@ Hardware:
 
 note: [certified hardware](https://ubuntu.com/certified)
 
-Required:Check <strong>ubuntu repository</strong> are enabled
+Required:Check <strong>ubuntu repository</strong>
 #[Ubuntu 24.04 LTS Noble] 
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/images/software_repositories.png" width="auto"></img>
 
