@@ -26,16 +26,15 @@ note: [ipfire](https://github.com/universalbit-dev/universalbit-dev/blob/main/ip
 ---
 ---
 ### [Python3](https://www.python.org/) 
-Note:
-
---Deadsnakes PPA has already updated its support for Ubuntu 24.04 (Noble)
+note:
+--Deadsnakes <strong>PPA</strong> has already updated its support for Ubuntu 24.04 (Noble)
 ```bash
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.11
 ```
 
-OR Download and Compile Python3 from source: [Compiling Software](https://help.ubuntu.com/community/CompilingSoftware)
+<strong>OR</strong> Download and Compile Python3 from <strong>source</strong>: [Compiling Software](https://help.ubuntu.com/community/CompilingSoftware)
 [Python3](https://www.python.org/downloads/)
 ```bash
 ./configure
@@ -46,9 +45,10 @@ sudo make install
 
 ### High Availability Required Packages:
 
+#01
 ```bash
 #[Ubuntu 24.04 LTS Noble]
-sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat
+sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat openssh-server
 ```
 ---
 
