@@ -101,7 +101,7 @@ ff02::2 ip6-allrouters
 192.168.1.144 armadillium04
 ```
 host setup
-* ##### [armadillium01]() -- [armadillium02]() -- [armadillium03]() -- [armadillium04]()
+* ##### [armadillium01](https://github.com/universalbit-dev/HArmadillium/blob/main/host/01.md) -- [armadillium02](https://github.com/universalbit-dev/HArmadillium/blob/main/host/02.md) -- [armadillium03](https://github.com/universalbit-dev/HArmadillium/blob/main/host/03.md) -- [armadillium04](https://github.com/universalbit-dev/HArmadillium/blob/main/host/04.md)
 
 ---
 ## SSH
