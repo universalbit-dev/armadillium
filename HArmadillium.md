@@ -36,7 +36,7 @@ sudo apt install python3.11
 ```
 
 <strong>OR</strong> Download and Compile Python3 from [source](https://www.python.org/downloads/): 
-note:
+* note:
 [Compiling Software](https://help.ubuntu.com/community/CompilingSoftware)
 
 ```bash
@@ -73,20 +73,20 @@ Getting <strong>Wiki</strong>:
 The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
 
 ```bash
-#01 #02 #03 #04
 sudo ufw allow from 192.168.1.141
 sudo ufw allow from 192.168.1.142
 sudo ufw allow from 192.168.1.143
 sudo ufw allow from 192.168.1.144
 sudo ufw allow ssh
 ```
+firewall setup
+* ##### [#01](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/01.md) -- [#02](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/02.md) -- [#03](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/03.md) -- [#04](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/04.md)
 
 ## Host
 * edit host file <strong>TO</strong> each node
 ```bash
 sudo nano /etc/hosts
 ```
-#01
 armadillium01 host
 ```bash
 127.0.0.1       localhost
