@@ -37,7 +37,7 @@ sudo make install
 ```
 
 
-### Required Packages:
+### High Availability Required Packages:
 
 ```bash
 #[Ubuntu 24.04 LTS Noble]
