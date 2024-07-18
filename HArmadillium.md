@@ -224,10 +224,8 @@ sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
 ---
----
-## CRM Consider this configuration tool as an alternative to the PCS.
-## [Cluster Setup](https://crmsh.github.io/start-guide/)
---
+#### Consider this configuration tool as an alternative to the PCS.
+##### CRM [Cluster Setup](https://crmsh.github.io/start-guide/)
 
 ## PCS
 * [PCS](https://packages.debian.org/buster/pcs) Pacemaker Configuration System
@@ -376,10 +374,7 @@ server {
 ```
 #### WebServer Resources
 * ### [Nginx configuration files](https://github.com/universalbit-dev/HArmadillium/tree/main/nginx)
-  * [01](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/01/default)
-  * [02](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/02/default)
-  * [03](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default)
-  * [04](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default)
+  * #### [01](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/01/default) -- [02](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/02/default) -- [03](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default) -- [04](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default)
 ---
 
 ---
