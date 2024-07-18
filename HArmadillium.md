@@ -72,75 +72,33 @@ Getting <strong>Wiki</strong>:
 
 
 ## Host
-* edit host file TO each node
+* edit host file <strong>TO</strong> each node
 ```bash
 sudo nano /etc/hosts
 ```
-
-* ##### example01 [armadillium01](https://github.com/universalbit-dev/HArmadillium) host setup
 ```bash
-#armadillium01
-192.168.1.141                  
-#armadillium02
-192.168.1.142                   
-#armadillium03
-192.168.1.143                   
-#armadillium04
-192.168.1.144                   
+#armadillium01 #armadillium02 #armadillium03 #armadillium04
+192.168.1.141
+192.168.1.142
+192.168.1.143
+192.168.1.144
+#
 127.0.0.1          localhost
 127.0.1.1          armadillium01.universalbit armadillium01
 # local-ip-address machinename
 ```
-<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/hosts.png" width="100%"></img>
 
+* ##### [armadillium01]() host setup
+<img src="" width="100%"></img>
 
-* ##### example02 [armadillium02](https://github.com/universalbit-dev/HArmadillium) host setup
-```bash
-#armadillium01
-192.168.1.141                   
-#armadillium02
-192.168.1.142                   
-#armadillium03
-192.168.1.143                   
-#armadillium04
-192.168.1.144                   
-127.0.0.1          localhost
-127.0.1.1          armadillium02.universalbit armadillium02
-# local-ip-address machinename
-```
-<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/hosts02.png" width="100%"></img>
+* ##### [armadillium02]() host setup
+<img src="" width="100%"></img>
 
-* ##### example03 [armadillium03](https://github.com/universalbit-dev/HArmadillium) host setup
-```bash
-#armadillium01
-192.168.1.141                   
-#armadillium02
-192.168.1.142                   
-#armadillium03
-192.168.1.143                   
-#armadillium04
-192.168.1.144                   
-127.0.0.1          localhost
-127.0.1.1          armadillium03.universalbit armadillium03
-# local-ip-address machinename
-```
-<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/hosts03.png" width="100%"></img>
+* ##### [armadillium03]() host setup
+<img src="" width="100%"></img>
 
-* ##### example04 [armadillium04](https://github.com/universalbit-dev/HArmadillium) host setup
-```bash
-#armadillium01
-192.168.1.141                   
-#armadillium02
-192.168.1.142                   
-#armadillium03
-192.168.1.143                   
-#armadillium04
-192.168.1.144                   
-127.0.0.1          localhost
-127.0.1.1          armadillium04.universalbit armadillium04
-# local-ip-address machinename
-```
-<img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/hosts04.png" width="100%"></img>
+* ##### [armadillium04]() host setup
+<img src="" width="100%"></img>
 
 ---
 ## SSH
@@ -269,8 +227,9 @@ sudo chmod 400 /etc/corosync/authkey
 ```
 ---
 ---
-## CRM
+## CRM Consider this configuration tool as an alternative to the PCS.
 ## [Cluster Setup](https://crmsh.github.io/start-guide/)
+--
 
 ## PCS
 * [PCS](https://packages.debian.org/buster/pcs) Pacemaker Configuration System
