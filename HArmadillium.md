@@ -35,8 +35,10 @@ sudo apt update
 sudo apt install python3.11
 ```
 
-<strong>OR</strong> Download and Compile Python3 from <strong>source</strong>: [Compiling Software](https://help.ubuntu.com/community/CompilingSoftware)
-[Python3](https://www.python.org/downloads/)
+<strong>OR</strong> Download and Compile Python3 from [source](https://www.python.org/downloads/): 
+note:
+[Compiling Software](https://help.ubuntu.com/community/CompilingSoftware)
+
 ```bash
 ./configure
 make
