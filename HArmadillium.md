@@ -67,21 +67,6 @@ sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw ngi
 Getting <strong>Wiki</strong>:
 * [Corosync-PCS-PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
 
-## UFW
-## Firewall Rules TO each node
--Description:
-The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
-
-```bash
-sudo ufw allow from 192.168.1.141
-sudo ufw allow from 192.168.1.142
-sudo ufw allow from 192.168.1.143
-sudo ufw allow from 192.168.1.144
-sudo ufw allow ssh
-```
-firewall setup
-* ##### [#01](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/01.md) -- [#02](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/02.md) -- [#03](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/03.md) -- [#04](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/04.md)
-
 ## Host
 * edit host file <strong>TO</strong> each node
 ```bash
@@ -118,7 +103,20 @@ sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw ngi
 ssh setup
 * ##### -- [#03](https://github.com/universalbit-dev/HArmadillium/blob/main/ssh/03.md) -- [#04](https://github.com/universalbit-dev/HArmadillium/blob/main/ssh/04.md)
 
----
+## UFW
+## Firewall Rules TO each node
+-Description:
+The Uncomplicated FireWall is a front-end for iptables, to make managing a Netfilter firewall easier. It provides a command line interface with syntax similar to OpenBSD's Packet Filter. It is particularly well-suited as a host-based firewall.
+
+```bash
+sudo ufw allow from 192.168.1.141
+sudo ufw allow from 192.168.1.142
+sudo ufw allow from 192.168.1.143
+sudo ufw allow from 192.168.1.144
+sudo ufw allow ssh
+```
+firewall setup
+* ##### [#01](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/01.md) -- [#02](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/02.md) -- [#03](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/03.md) -- [#04](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/04.md)
 ---
 
 #### High Availability
