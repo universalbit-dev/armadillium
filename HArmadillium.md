@@ -224,8 +224,11 @@ sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
 ---
-#### Consider this configuration tool as an alternative to the PCS.
-##### CRM [Cluster Setup](https://crmsh.github.io/start-guide/)
+## CRM 
+#### Consider this configuration tool as an alternative to PCS.
+[Cluster Setup](https://crmsh.github.io/start-guide/)
+
+---
 
 ## PCS
 * [PCS](https://packages.debian.org/buster/pcs) Pacemaker Configuration System
