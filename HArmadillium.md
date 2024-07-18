@@ -60,6 +60,7 @@ sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw ngi
 * [SSH connections](#SSH)
 * [Corosync](#Corosync)
 * [PCMK file](#PCMK)
+* [CRM](#CRM)
 * [PCS Setup](#PCS)
 * [WebServer](#WebServer)
 * [PaceMaker](#PaceMaker)
@@ -268,6 +269,9 @@ sudo chmod 400 /etc/corosync/authkey
 ```
 ---
 ---
+## CRM
+## [Cluster Setup](https://crmsh.github.io/start-guide/)
+
 ## PCS
 * [PCS](https://packages.debian.org/buster/pcs) Pacemaker Configuration System
 -Description:
