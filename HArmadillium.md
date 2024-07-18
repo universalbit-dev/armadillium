@@ -88,10 +88,7 @@ sudo nano /etc/hosts
 # local-ip-address machinename
 ```
 host setup
-* ##### [armadillium01]() 
-* ##### [armadillium02]()
-* ##### [armadillium03]()
-* ##### [armadillium04]()
+* ##### [armadillium01]() -- [armadillium02]() -- [armadillium03]() -- [armadillium04]()
 
 ---
 ## SSH
