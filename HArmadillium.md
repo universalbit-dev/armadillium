@@ -207,7 +207,7 @@ sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
-* [corosync setup](https://github.com/universalbit-dev/HArmadillium/tree/main/corosync)
+[corosync setup](https://github.com/universalbit-dev/HArmadillium/tree/main/corosync)
 
 ---
 ## CRM 
