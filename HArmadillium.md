@@ -84,16 +84,21 @@ sudo ufw allow ssh
 ```bash
 sudo nano /etc/hosts
 ```
+armadillium01 host
 ```bash
-#armadillium01 #armadillium02 #armadillium03 #armadillium04
-192.168.1.141
-192.168.1.142
-192.168.1.143
-192.168.1.144
-#
-127.0.0.1          localhost
-127.0.1.1          armadillium01.universalbit armadillium01
-# local-ip-address machinename
+127.0.0.1       localhost
+127.0.1.1       armadillium01
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+192.168.1.142 armadillium02
+192.168.1.143 armadillium03
+192.168.1.144 armadillium04
 ```
 host setup
 * ##### [armadillium01]() -- [armadillium02]() -- [armadillium03]() -- [armadillium04]()
