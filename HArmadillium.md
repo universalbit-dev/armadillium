@@ -115,8 +115,8 @@ sudo ufw allow from 192.168.1.143
 sudo ufw allow from 192.168.1.144
 sudo ufw allow ssh
 ```
-firewall setup
-* ##### [#01](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/01.md) -- [#02](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/02.md) -- [#03](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/03.md) -- [#04](https://github.com/universalbit-dev/HArmadillium/blob/main/ufw/04.md)
+[firewall rules](https://github.com/universalbit-dev/HArmadillium/tree/main/ufw)
+
 ---
 
 #### High Availability
@@ -200,28 +200,14 @@ sudo scp /etc/corosync/authkey armadillium02@192.168.1.142:/tmp #02
 sudo scp /etc/corosync/authkey armadillium03@192.168.1.143:/tmp #03
 sudo scp /etc/corosync/authkey armadillium04@192.168.1.144:/tmp #04
 ```
-<strong>FROM</strong> armadillium01
-* connect <strong>TO</strong> armadillium02 and move authkey <strong>FROM</strong> /tmp directory <strong>TO</strong> /etc/corosync directory
+<strong>FROM</strong> armadillium01 <strong>TO</strong> armadillium02 and move authkey <strong>FROM</strong> /tmp directory <strong>TO</strong> /etc/corosync directory
 ```bash
 ssh armadillium02@192.168.1.142
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
 ```
-* connect <strong>TO</strong> armadillium03 and move authkey <strong>FROM</strong> /tmp directory <strong>TO</strong> /etc/corosync directory
-```bash
-ssh armadillium03@192.168.1.143
-sudo mv /tmp/authkey /etc/corosync
-sudo chown root: /etc/corosync/authkey
-sudo chmod 400 /etc/corosync/authkey
-```
-* connect TO <strong>armadillium04</strong> and move authkey <strong>FROM</strong> /tmp directory <strong>TO</strong> /etc/corosync directory
-```bash
-ssh armadillium04@192.168.1.144
-sudo mv /tmp/authkey /etc/corosync
-sudo chown root: /etc/corosync/authkey
-sudo chmod 400 /etc/corosync/authkey
-```
+
 ---
 ## CRM 
 #### Consider this configuration tool as an alternative to PCS.
