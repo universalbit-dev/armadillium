@@ -27,8 +27,7 @@ crm configure primitive webserver ocf:heartbeat:nginx configfile=/etc/nginx/ngin
 ```
 ### ClusterLabs [Resource Agents](https://github.com/ClusterLabs/resource-agents)
 
-* ##### [PCS Create Resources](https://www.golinuxcloud.com/create-cluster-resource-in-ha-cluster-examples/):
-* ##### Create PCSFloating IP Resource:
+* ##### Create PCS FLOATING IP Resource:
 ```bash
 sudo pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=192.168.1.140 cidr_netmask=32 op monitor interval=30s
 #crm configure primitive virtual_ip ocf:heartbeat:IPaddr2 params ip="192.168.1.140" cidr_netmask="32" op monitor interval="10s" meta migration-threshold="10"
@@ -37,11 +36,11 @@ sudo pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=192.168.1.140 cidr_
 ```bash
 sudo pcs constraint colocation add webserver with virtual_ip INFINITY
 ```
-
 ```bash
 sudo pcs constraint order webserver then virtual_ip
 ```
-
+#### Required:
+* [ClusterLabs Enable pcs Daemon ](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/2.0/html/Clusters_from_Scratch/_enable_pcs_daemon.html)
 #### PCS AUTH authorize host
 FROM armadillium01:
 ```bash
@@ -49,11 +48,6 @@ sudo pcs host auth armadillium02
 sudo pcs host auth armadillium03
 sudo pcs host auth armadillium04
 ```
-* user:     hacluster 
-* password: use same password
-
-note:
-* user hacluster auto created when install pcs package.
 
 * ##### Start PCS
 ```bash
