@@ -135,7 +135,7 @@ sudo ufw allow ssh
  * A quorum system that notifies applications when quorum is achieved
    or lost.
 
-#### Corosync Configuration File: repeat this TO each node
+#### Corosync Configuration File: repeat this TO [each node](https://github.com/universalbit-dev/HArmadillium/tree/main/corosync)
 ```bash
 sudo nano /etc/corosync/corosync.conf
 ```
