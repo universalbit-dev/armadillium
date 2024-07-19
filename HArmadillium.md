@@ -233,6 +233,7 @@ sudo pcs cluster setup HArmadillium armadillium01 armadillium02 armadillium03 ar
 #armadillium01
 sudo passwd hacluster
 ```
+
 #### authenticate localhost
 ```bash
 sudo pcs client local-auth
@@ -245,9 +246,10 @@ sudo pcs client local-auth
 #### PCS AUTH authorize/authenticate other host
 ```bash
 #armadillium01
-sudo pcs host auth armadillium02 armadillium03 armadillium04
+sudo pcs host auth armadillium01 armadillium02 armadillium03 armadillium04
 #Username: hacluster
-#Password: 
+#Password:
+#armadillium01: Authorized
 #armadillium02: Authorized
 #armadillium03: Authorized
 #armadillium04: Authorized
