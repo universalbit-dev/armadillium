@@ -322,7 +322,6 @@ service {
 ---
 ## Webserver
 * ##### Nginx as Reverse Proxy
-create ssl certificate TO each node
 ```bash
 sudo apt install openssl nginx -y
 ```
@@ -342,7 +341,6 @@ chmod 400 host.key
 openssl req -new -x509 -nodes -sha256 -days 365 -key host.key -out host.cert -config distinguished.cnf
 sudo cp host.key host.cert /etc/nginx/ssl
 ```
-
 
 ## Nginx Configuration File (default)
 * edit the Nginx default file 
@@ -396,9 +394,11 @@ server {
             proxy_send_timeout 86400s;
     }
 }
+#armadillium01 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+
 ```
 #### webserver nginx node configuration file:
-  * #### #[01](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/01/default) -- #[02](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/02/default) -- #[03](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default) -- #[04](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default)
+  * #[01](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/01/default) -- #[02](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/02/default) -- #[03](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default) -- #[04](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default)
 
 ---
 
