@@ -259,12 +259,11 @@ sudo pcs constraint order webserver then virtual_ip
 ```
 #### Required:
 * [ClusterLabs Enable pcs Daemon ](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/2.0/html/Clusters_from_Scratch/_enable_pcs_daemon.html)
+
 #### PCS AUTH authorize host
-FROM armadillium01:
 ```bash
-sudo pcs host auth armadillium02
-sudo pcs host auth armadillium03
-sudo pcs host auth armadillium04
+#armadillium01
+sudo pcs host auth armadillium02 armadillium03 armadillium04
 ```
 
 * ##### Start PCS
@@ -286,7 +285,6 @@ service {
 }
 ```
 
-
 ---
 ## Webserver
 * ##### Nginx as Reverse Proxy
@@ -295,7 +293,6 @@ create ssl certificate TO each node
 sudo apt install nginx -y
 ```
 * ##### [HTTPS](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-22-04)
-TO each node:
 ```bash
 sudo apt install openssl
 ```
@@ -314,6 +311,7 @@ nano /etc/nginx/sites-enabled/default
 ```
 * armadillium01 nginx configuration file:
 ```bash
+#armadillium01
 server {
 listen 80;
 listen [::]:80;
