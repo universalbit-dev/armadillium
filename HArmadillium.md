@@ -194,15 +194,16 @@ service {
 #armadillium01 
 sudo corosync-keygen
 ```
-* secure copy (ssh) authkey FROM armadillium01 TO each node : /tmp directory 
+* secure copy(ssh) corosync authkey <strong>FROM</strong> armadillium01 <strong>TO</strong> #armadillium02 #armadillium03 #armadillium04 <strong>IN</strong> /tmp directory 
 ```bash
 sudo scp /etc/corosync/authkey armadillium02@192.168.1.142:/tmp #02
 sudo scp /etc/corosync/authkey armadillium03@192.168.1.143:/tmp #03
 sudo scp /etc/corosync/authkey armadillium04@192.168.1.144:/tmp #04
 ```
-<strong>FROM</strong> armadillium01 <strong>TO</strong> armadillium02 and move authkey <strong>FROM</strong> /tmp directory <strong>TO</strong> /etc/corosync directory
+* connect via(ssh) and move copied file <strong>FROM</strong> /tmp directory <strong>TO</strong> /etc/corosync directory 
 ```bash
-ssh armadillium02@192.168.1.142
+#connect(ssh) to armadillium02 
+ssh armadillium02@192.168.1.142 #02
 sudo mv /tmp/authkey /etc/corosync
 sudo chown root: /etc/corosync/authkey
 sudo chmod 400 /etc/corosync/authkey
