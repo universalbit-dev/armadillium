@@ -290,13 +290,22 @@ sudo pcs constraint order webserver then virtual_ip
 * [ClusterLabs Enable pcs Daemon ](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/2.0/html/Clusters_from_Scratch/_enable_pcs_daemon.html)
 
 
-* ##### Start PCS
+* ##### Start PCS cluster and enable all
 ```bash
 sudo pcs cluster start --all
 sudo pcs cluster enable --all
-```
-## PCMK
+#armadillium01: Starting Cluster...
+#armadillium02: Starting Cluster...
+#armadillium03: Starting Cluster...
+#armadillium04: Starting Cluster...
+#armadillium01: Cluster Enabled
+#armadillium02: Cluster Enabled
+#armadillium03: Cluster Enabled
+#armadillium04: Cluster Enabled
 
+```
+
+## PCMK
 * ##### Create PCMK file
 ```bash 
 sudo mkdir /etc/corosync/service.d
