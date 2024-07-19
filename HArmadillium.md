@@ -246,6 +246,11 @@ sudo pcs client local-auth
 ```bash
 #armadillium01
 sudo pcs host auth armadillium02 armadillium03 armadillium04
+#Username: hacluster
+#Password: 
+#armadillium02: Authorized
+#armadillium03: Authorized
+#armadillium04: Authorized
 ```
 
 * ##### Disable STONITH 
