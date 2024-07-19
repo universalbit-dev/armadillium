@@ -282,8 +282,10 @@ sudo pcs constraint colocation add webserver with virtual_ip INFINITY
 ```
 ```bash
 sudo pcs constraint order webserver then virtual_ip
+#Adding webserver virtual_ip (kind: Mandatory) (Options: first-action=start then-action=start)
+
 ```
-#### Required:
+#### note:
 * [ClusterLabs Enable pcs Daemon ](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/2.0/html/Clusters_from_Scratch/_enable_pcs_daemon.html)
 
 
