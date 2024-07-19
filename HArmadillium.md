@@ -257,11 +257,11 @@ sudo pcs host auth armadillium01 armadillium02 armadillium03 armadillium04
 
 * ##### Disable STONITH 
 ```bash
-pcs property set stonith-enabled=false
+sudo pcs property set stonith-enabled=false
 ```
 * ##### Ignore Quorum policy
 ```bash
-pcs property set no-quorum-policy=ignore
+sudo pcs property set no-quorum-policy=ignore
 ```
 * ##### [PCS Create Resources](https://www.golinuxcloud.com/create-cluster-resource-in-ha-cluster-examples/):
 * ##### Create WebServer Resource
