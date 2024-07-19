@@ -352,7 +352,7 @@ nano /etc/nginx/sites-enabled/default
 
 * #armadillium01 Nginx configuration file:
 ```bash
-#armadillium01
+#armadillium01 192.168.1.141
 server {
 listen 80;
 listen [::]:80;
@@ -397,7 +397,7 @@ server {
     }
 }
 ```
-#### configuration files:
+#### webserver nginx node configuration file:
   * #### #[01](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/01/default) -- #[02](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/02/default) -- #[03](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default) -- #[04](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default)
 
 ---
