@@ -465,6 +465,7 @@ stonith-enabled: false
 ---
 
 Resources:
+* [Clusters_from_Scratch](https://clusterlabs.org/pacemaker/doc/2.1/Clusters_from_Scratch/html/index.html)
 * [HA](https://wiki.debian.org/Debian-HA) 
 * [Debian-HA](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
 * [Cluster-Labs](https://clusterlabs.org/)
