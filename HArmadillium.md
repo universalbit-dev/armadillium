@@ -227,8 +227,27 @@ pcs also provides pcsd, which operates as a GUI and remote server for PCS.
 ```bash
 #armadillium01
 sudo pcs cluster setup HArmadillium armadillium01 armadillium02 armadillium03 armadillium04
-sudo pcs cluster start --all
 ```
+#### PCS Create Password  and authenticate localhost
+```bash
+#armadillium01
+sudo passwd hacluster
+```
+#### authenticate localhost
+```bash
+sudo pcs client local-auth
+#Username: hacluster
+#Password: 
+#localhost: Authorized
+```
+[ClusterLabs](https://clusterlabs.org/pacemaker/doc/2.1/Clusters_from_Scratch/html/cluster-setup.html) (3.3.2. Enable pcs Daemon)
+
+#### PCS AUTH authorize/authenticate other host
+```bash
+#armadillium01
+sudo pcs host auth armadillium02 armadillium03 armadillium04
+```
+
 * ##### Disable STONITH 
 ```bash
 pcs property set stonith-enabled=false
@@ -260,11 +279,6 @@ sudo pcs constraint order webserver then virtual_ip
 #### Required:
 * [ClusterLabs Enable pcs Daemon ](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/2.0/html/Clusters_from_Scratch/_enable_pcs_daemon.html)
 
-#### PCS AUTH authorize host
-```bash
-#armadillium01
-sudo pcs host auth armadillium02 armadillium03 armadillium04
-```
 
 * ##### Start PCS
 ```bash
@@ -272,6 +286,7 @@ sudo pcs cluster start --all
 sudo pcs cluster enable --all
 ```
 ## PCMK
+
 * ##### Create PCMK file
 ```bash 
 sudo mkdir /etc/corosync/service.d
