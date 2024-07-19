@@ -304,6 +304,18 @@ sudo pcs cluster enable --all
 #armadillium04: Cluster Enabled
 
 ```
+---
+## Pacemaker
+## Cluster Resource Manager:
+-Description:
+Pacemaker is a distributed finite state machine capable of co-ordinating the startup and recovery of inter-related services across a set of machines.
+Pacemaker understands many different resource types (OCF, SYSV, systemd) and can accurately model the relationships between them (colocation, ordering).
+
+##### Run Pacemaker after corosync service: TO each node
+```bash
+sudo update-rc.d pacemaker defaults 20 01
+```
+---
 
 ## PCMK
 * ##### Create PCMK file
@@ -430,18 +442,6 @@ sudo pcs cluster status
   * armadillium04: Online
   * armadillium02: Online
   * armadillium01: Online
-```
----
----
-## Pacemaker
-## Cluster Resource Manager:
--Description:
-Pacemaker is a distributed finite state machine capable of co-ordinating the startup and recovery of inter-related services across a set of machines.
-Pacemaker understands many different resource types (OCF, SYSV, systemd) and can accurately model the relationships between them (colocation, ordering).
-
-##### Run Pacemaker after corosync service: TO each node
-```bash
-sudo update-rc.d pacemaker defaults 20 01
 ```
 ---
 
