@@ -324,26 +324,33 @@ service {
 * ##### Nginx as Reverse Proxy
 create ssl certificate TO each node
 ```bash
-sudo apt install nginx -y
+sudo apt install openssl nginx -y
 ```
-* ##### [HTTPS](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-22-04)
+[OpenSSL](https://github.com/openssl/openssl) WebServer 
+
+## [HTTPS]
+#### self-signed certificate (HTTPS) with OpenSSL 
 ```bash
-sudo apt install openssl
+sudo mkdir /etc/nginx/ssl
 ```
-* create self-signed certificate:
+
 ```bash
+git clone https://github.com/universalbit-dev/HArmadillium/
+cd ~/HArmadillium/ssl
 openssl genrsa 2048 > host.key
 chmod 400 host.key
 openssl req -new -x509 -nodes -sha256 -days 365 -key host.key -out host.cert -config distinguished.cnf
-cp host.cert /etc/nginx/ssl/
-cp host.key  /etc/nginx/ssl/
+sudo cp host.key host.cert /etc/nginx/ssl
 ```
 
+
+## Nginx Configuration File (default)
 * edit the Nginx default file 
 ```bash
 nano /etc/nginx/sites-enabled/default
 ```
-* armadillium01 nginx configuration file:
+
+* #armadillium01 Nginx configuration file:
 ```bash
 #armadillium01
 server {
@@ -390,9 +397,8 @@ server {
     }
 }
 ```
-#### WebServer 
+#### configuration files:
   * #### #[01](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/01/default) -- #[02](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/02/default) -- #[03](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default) -- #[04](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/03/default)
----
 
 ---
 
