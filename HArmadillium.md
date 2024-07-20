@@ -94,6 +94,7 @@ host setup
 ---
 ## SSH
 ##### SSH connection to communicate with all nodes
+[OpenSSH Server](https://ubuntu.com/server/docs/openssh-server)
 Install required packages to each node and <strong>Check [ubuntu repository](#ubuntu)</strong>
 * <strong>FROM</strong> armadillium01 <strong>TO</strong> armadillium02
 ```bash
