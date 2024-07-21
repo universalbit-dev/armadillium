@@ -1,4 +1,4 @@
-#armadillium01
+#armadillium01 192.168.1.141
 server {
 listen 80;
 listen [::]:80;
