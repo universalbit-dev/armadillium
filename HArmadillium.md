@@ -225,18 +225,14 @@ sudo chmod 400 /etc/corosync/authkey
 -Description:
 It permits users to easily view, modify and create pacemaker based clusters.
 pcs also provides pcsd, which operates as a GUI and remote server for PCS.
-
-* ##### PCS Setup Cluster : 
 ```bash
-#armadillium01
-sudo pcs cluster setup HArmadillium armadillium01 armadillium02 armadillium03 armadillium04
+sudo service pcsd start
 ```
 #### PCS Create Password  and authenticate localhost
 ```bash
 #armadillium01
 sudo passwd hacluster
 ```
-
 #### authenticate localhost
 ```bash
 sudo pcs client local-auth
@@ -244,9 +240,7 @@ sudo pcs client local-auth
 #Password: 
 #localhost: Authorized
 ```
-[ClusterLabs](https://clusterlabs.org/pacemaker/doc/2.1/Clusters_from_Scratch/html/cluster-setup.html) (3.3.2. Enable pcs Daemon)
-
-#### PCS AUTH authorize/authenticate other host
+#### PCS AUTH authorize/authenticate host
 ```bash
 #armadillium01
 sudo pcs host auth armadillium01 armadillium02 armadillium03 armadillium04
@@ -257,6 +251,13 @@ sudo pcs host auth armadillium01 armadillium02 armadillium03 armadillium04
 #armadillium03: Authorized
 #armadillium04: Authorized
 ```
+* ##### PCS Setup Cluster : 
+```bash
+#armadillium01
+sudo pcs cluster setup HArmadillium armadillium01 armadillium02 armadillium03 armadillium04
+```
+
+[ClusterLabs](https://clusterlabs.org/pacemaker/doc/2.1/Clusters_from_Scratch/html/cluster-setup.html) (3.3.2. Enable pcs Daemon)
 
 * ##### Disable STONITH 
 ```bash
