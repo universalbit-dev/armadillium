@@ -360,10 +360,11 @@ sudo cp host.key host.cert /etc/nginx/ssl
 ## Nginx Configuration File (default)
 * edit the Nginx default file 
 ```bash
-nano /etc/nginx/sites-enabled/default
+sudo rm /etc/nginx/sites-enabled/default
+sudo nano /etc/nginx/sites-enabled/default
 ```
 
-* #armadillium01 Nginx configuration file:
+* #armadillium01 <strong>Nginx</strong> configuration file:
 ```bash
 #armadillium01 192.168.1.141
 server {
