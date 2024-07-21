@@ -139,6 +139,7 @@ sudo ufw allow ssh
 
 #### Corosync Configuration File: repeat this TO [each node](https://github.com/universalbit-dev/HArmadillium/tree/main/corosync)
 ```bash
+sudo rm /etc/corosync/corosync.conf
 sudo nano /etc/corosync/corosync.conf
 ```
 corosync configuration file:
@@ -186,6 +187,9 @@ service {
   name: pacemaker
   ver: 1
 }
+```
+```
+sudo service corosync start
 ```
 ---
 ---
