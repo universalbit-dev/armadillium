@@ -1,12 +1,13 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)   ##### [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)   ##### [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 ---
-
 * [ThinClient] Setup:[Armadillium](https://github.com/universalbit-dev/armadillium)
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/docs/assets/images/ecosystem_gran_canaria_edited.png" width="auto" />
 
+* ## [What is High Availability?](https://www.digitalocean.com/community/tutorials/what-is-high-availability)
+
 ---
 
-## [Introduction to High Availability](https://ubuntu.com/server/docs/introduction-to-high-availability)
+### [Introduction to High Availability](https://ubuntu.com/server/docs/introduction-to-high-availability)
 
 ### HArmadillium 
 Hardware:
