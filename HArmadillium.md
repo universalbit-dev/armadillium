@@ -56,6 +56,7 @@ sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw ngi
 ---
 
 ###### Overview:
+* [Static IP](#StaticIP)
 * [Host setup](#Host)
 * [SSH connections](#SSH)
 * [Corosync](#Corosync)
@@ -68,6 +69,9 @@ sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw ngi
 
 Getting <strong>Wiki</strong>:
 * [Corosync-PCS-PaceMaker](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
+
+## StaticIP
+[Setup Static IP](https://www.freecodecamp.org/news/setting-a-static-ip-in-ubuntu-linux-ip-address-tutorial/)
 
 ## Host
 * edit host file <strong>TO</strong> each node
