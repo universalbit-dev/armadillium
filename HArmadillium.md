@@ -379,13 +379,13 @@ sudo nano /etc/nginx/sites-enabled/default
 server {
 listen 80;
 listen [::]:80;
-server_name 192.168.1.141;
+server_name armadillium01;
 return 301 https://$host$request_uri;
 }
 
 server {
 listen 8001;
-server_name 192.168.1.141;
+server_name armadillium01;
 return 301 https://$host$request_uri;
 }
     
@@ -399,7 +399,7 @@ upstream websocket {
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
-    server_name 192.168.1.141;
+    server_name armadillium01;
     root /usr/share/nginx/html;
     ssl_certificate /etc/nginx/ssl/host.cert;
     ssl_certificate_key /etc/nginx/ssl/host.key;    
