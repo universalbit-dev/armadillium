@@ -380,13 +380,11 @@ server {
 listen 80;
 listen [::]:80;
 server_name 192.168.1.141;
-return 301 https://$server_name$request_uri;
 }
 
 server {
     server_name 192.168.1.141;
     listen 8001;
-    return 301 https://$host$request_uri;
     }
     
 upstream websocket {
