@@ -96,7 +96,7 @@ ff02::2 ip6-allrouters
 ```
 host setup
 * ##### [#01](https://github.com/universalbit-dev/HArmadillium/blob/main/host/01.md) -- [#02](https://github.com/universalbit-dev/HArmadillium/blob/main/host/02.md) -- [#03](https://github.com/universalbit-dev/HArmadillium/blob/main/host/03.md) -- [#04](https://github.com/universalbit-dev/HArmadillium/blob/main/host/04.md)
-
+#### note : [IPFIRE Adding a Host](https://www.ipfire.org/docs/configuration/network/hosts)
 ---
 ## SSH
 ##### SSH connection to communicate with all nodes
