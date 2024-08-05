@@ -31,8 +31,8 @@ Operative System:
 ---
 
 ##### WebServer:
-* [Nginx](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md#webserver) -- [Nginx configuration file](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md#https)
-* [HTTPS](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md#https) 
+* [Nginx](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md#webserver) -- [Nginx configuration file](https://github.com/universalbit-dev/HArmadillium/blob/main/nginx/01/default)
+* [HTTPS](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md#self-signed-certificate-https-with-openssl) 
 * [SSH connections](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md#ssh)
 
 ##### Basic Security (If needed,use this: [SELKS](https://github.com/universalbit-dev/SELKS))
