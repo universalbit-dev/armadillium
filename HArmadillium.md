@@ -105,7 +105,7 @@ Install required packages to each node and <strong>Check [ubuntu repository](#ub
 * <strong>FROM</strong> armadillium01 <strong>TO</strong> armadillium02
 ```bash
 ssh armadillium02@192.168.1.142
-sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat openssh-server
+sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat openssh-server openssh-client
 ```
 * <strong>openssh-server:</strong> OpenSSH server application and related support files.
 * <strong>openssh-client:</strong> OpenSSH client applications on your Ubuntu system
