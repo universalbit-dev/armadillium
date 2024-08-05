@@ -31,8 +31,9 @@ Operative System:
 ---
 
 ##### WebServer:
-* [Nginx](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/)
-* SSH connections [wiki](https://wiki.debian.org/SSH)
+* [Nginx](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md#webserver) -- [Nginx configuration file](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md#https)
+* [HTTPS](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md#https) 
+* [SSH connections](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md#ssh)
 
 ##### Basic Security (If needed,use this: [SELKS](https://github.com/universalbit-dev/SELKS))
 * [UFW](https://manpages.ubuntu.com/manpages/bionic/en/man8/ufw.8.html) -- [UFW Firewall setup](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu)
