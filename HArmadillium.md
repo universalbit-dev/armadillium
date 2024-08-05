@@ -51,7 +51,7 @@ sudo make install
 ### High Availability Required Packages:
 ```bash
 #[Ubuntu 24.04 LTS Noble]
-sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat openssh-server
+sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat openssh-server openssh-client
 ```
 ---
 
