@@ -100,15 +100,17 @@ host setup
 ---
 ## SSH
 ##### SSH connection to communicate with all nodes
-[OpenSSH Server](https://ubuntu.com/server/docs/openssh-server)
+[OpenSSH Server](https://ubuntu.com/server/docs/openssh-server) -- [Docs](https://www.openssh.com/manual.html)
 Install required packages to each node and <strong>Check [ubuntu repository](#ubuntu)</strong>
 * <strong>FROM</strong> armadillium01 <strong>TO</strong> armadillium02
 ```bash
 ssh armadillium02@192.168.1.142
 sudo apt install corosync pacemaker fence-agents crmsh pcs* cluster-glue ufw nginx haveged heartbeat openssh-server
 ```
-ssh setup
-* ##### -- [#03](https://github.com/universalbit-dev/HArmadillium/blob/main/ssh/03.md) -- [#04](https://github.com/universalbit-dev/HArmadillium/blob/main/ssh/04.md)
+note: [OpenSSH](https://ubuntu.com/server/docs/openssh-server)
+* <strong>openssh-server:</strong> OpenSSH server application and related support files.
+* <strong>openssh-client:</strong> OpenSSH client applications on your Ubuntu system
+##### -- [#01](https://github.com/universalbit-dev/HArmadillium/blob/main/ssh/01.md) -- [#02](https://github.com/universalbit-dev/HArmadillium/blob/main/ssh/02.md) -- [#03](https://github.com/universalbit-dev/HArmadillium/blob/main/ssh/03.md) -- [#04](https://github.com/universalbit-dev/HArmadillium/blob/main/ssh/04.md)
 
 ## UFW
 ## Firewall Rules TO each node
@@ -444,7 +446,7 @@ armadillium02: Unable to authenticate to armadillium02 - (HTTP error: 401)...
 * ##### fix: Start PCSD service
 ```bash
 #armadilliun02
-ssh armadillium02@10.0.2.142
+ssh armadillium02@192.168.1.142
 sudo service pcsd start
 sudo service pcsd status
 ```
