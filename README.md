@@ -25,9 +25,6 @@ Operative System:
 * [Debian Minimal Server](https://www.howtoforge.com/tutorial/debian-minimal-server/)
 * [Ubuntu 24.04 LTS](https://ubuntu.com/download/desktop#community)
 
-#### GPU DRIVERS:
-##### [AMDVLK](https://github.com/universalbit-dev/AMDVLK) --
-
 ---
 
 ##### WebServer:
@@ -43,18 +40,12 @@ Operative System:
 
 ```bash
 apt install ufw haproxy fail2ban
+systemctl enable ufw haproxy fail2ban
 ```
 ---
 ---
 
 ### Debian/Ubuntu distro: [GPUOpen-Drivers](https://github.com/GPUOpen-Drivers/AMDVLK)
-* [OpenCL](https://github.com/KhronosGroup/OpenCL-Guide/blob/main/chapters/getting_started_linux.md) 
-* [AMDVLK](https://github.com/GPUOpen-Drivers/AMDVLK)
-
-```bash
-apt-get install libssl-dev libx11-dev libxcb1-dev x11proto-dri2-dev libxcb-dri3-dev libxcb-dri2-0-dev libxcb-present-dev libxshmfence-dev libxrandr-dev libwayland-dev ocl-icd-opencl-dev 
-```
-##### amdvlk other [distro](https://github.com/GPUOpen-Drivers/AMDVLK?tab=readme-ov-file#install-dev-and-tools-packages)
 
 ---
 
