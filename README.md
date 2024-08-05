@@ -43,10 +43,7 @@ apt install ufw haproxy fail2ban
 systemctl enable ufw haproxy fail2ban
 ```
 ---
----
-
 ### Debian/Ubuntu distro: [GPUOpen-Drivers](https://github.com/GPUOpen-Drivers/AMDVLK)
-
 ---
 
 ##### Monitor server performance with 
@@ -54,7 +51,4 @@ systemctl enable ufw haproxy fail2ban
 ```bash
 wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh
 ```
-
-[Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
-
 ### HappyCoding!
