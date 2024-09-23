@@ -25,10 +25,10 @@ Required:<strong>ubuntu repository</strong>
 ### Wiring
 <img src="https://github.com/universalbit-dev/HArmadillium/blob/main/images/HArmadillium.jpg" width="auto" />
 
-note: [ipfire](https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/readme.md)
+##### [ipfire](https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/readme.md)
 
 ---
----
+
 ### [Python3](https://www.python.org/) 
 note:
 --Deadsnakes <strong>PPA</strong> has already updated its support for Ubuntu 24.04 (Noble)
@@ -37,17 +37,12 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.11
 ```
+##### Alternative:
+* [Download and Compile Python3](https://www.python.org/downloads/)
+* [Compiling Software](https://help.ubuntu.com/community/CompilingSoftware)
+* [Getting Started setup-building](https://devguide.python.org/getting-started/setup-building/index.html)
 
-<strong>OR</strong> Download and Compile Python3 from [source](https://www.python.org/downloads/): 
-* note:
-[Compiling Software](https://help.ubuntu.com/community/CompilingSoftware)
 
-```bash
-./configure
-make
-make test
-sudo make install
-```
 
 ### High Availability Required Packages:
 ```bash
