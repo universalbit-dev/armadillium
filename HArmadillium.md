@@ -12,10 +12,8 @@
 
 ### HArmadillium 
 Hardware:
-* [HP-T610 Thin Client Product Specifications](https://support.hp.com/us-en/document/c03235347) 
-* [HP-T630 Thin Client Product Specifications](https://support.hp.com/us-en/document/c05240287) 
-
-note: [certified hardware](https://ubuntu.com/certified)
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/HP-T610.png" width="10%" />
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/HP-T630.png" width="13%" />
 
 ##### ubuntu
 Required:<strong>ubuntu repository</strong>
@@ -41,8 +39,7 @@ sudo apt install python3.11
 * [Download and Compile Python3](https://www.python.org/downloads/)
 * [Compiling Software](https://help.ubuntu.com/community/CompilingSoftware)
 * [Getting Started setup-building](https://devguide.python.org/getting-started/setup-building/index.html)
-
-
+  
 
 ### High Availability Required Packages:
 ```bash
@@ -475,7 +472,6 @@ stonith-enabled: false
 ```
 ##### HACluster configured and ready to host something of amazing
 ---
----
 
 Resources:
 * [Clusters_from_Scratch](https://clusterlabs.org/pacemaker/doc/2.1/Clusters_from_Scratch/html/index.html)
@@ -490,4 +486,5 @@ Resources:
 * [Pacemaker](https://github.com/ClusterLabs/pacemaker)
 * [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 * [NetWorkManager](https://wiki.debian.org/NetworkConfiguration)
+* [Ubuntu Certified Hardware](https://ubuntu.com/certified)
 * [Hosts](https://wiki.debian.org/Hostname)
