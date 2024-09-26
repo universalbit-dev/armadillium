@@ -421,6 +421,9 @@ server {
 ```
 sudo service nginx start
 ```
+##### Alternative to webserver Nginx : (work in progress)
+* [Apache High Availability](https://activemq.apache.org/components/artemis/documentation/latest/ha)
+* [ClusterLabs Apache HTTP Server as a Cluster Service](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/ch06.html)
 ---
 
 * ##### Throubleshooter:
@@ -476,6 +479,7 @@ stonith-enabled: false
 * [Clusters_from_Scratch](https://clusterlabs.org/pacemaker/doc/2.1/Clusters_from_Scratch/html/index.html)
 * [NGINX High Availability](https://docs.nginx.com/nginx/admin-guide/high-availability/)
 * [Apache High Availability](https://activemq.apache.org/components/artemis/documentation/latest/ha)
+* [ClusterLabs Apache HTTP Server as a Cluster Service](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/ch06.html)
 * [HA](https://wiki.debian.org/Debian-HA) 
 * [Debian-HA](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
 * [Cluster-Labs](https://clusterlabs.org/)
