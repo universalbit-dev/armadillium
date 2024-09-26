@@ -35,9 +35,8 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.11
 ```
-##### Alternative:
+##### Alternative Python Setup:
 * [Download and Compile Python3](https://www.python.org/downloads/)
-* [Compiling Software](https://help.ubuntu.com/community/CompilingSoftware)
 * [Getting Started setup-building](https://devguide.python.org/getting-started/setup-building/index.html)
   
 
@@ -470,11 +469,13 @@ have-watchdog: false
 no-quorum-policy: ignore
 stonith-enabled: false
 ```
-##### HACluster configured and ready to host something of amazing
+##### HACluster configured and ready to [host]() something of amazing
 ---
 
-Resources:
+#### Resources:
 * [Clusters_from_Scratch](https://clusterlabs.org/pacemaker/doc/2.1/Clusters_from_Scratch/html/index.html)
+* [NGINX High Availability](https://docs.nginx.com/nginx/admin-guide/high-availability/)
+* [Apache High Availability](https://activemq.apache.org/components/artemis/documentation/latest/ha)
 * [HA](https://wiki.debian.org/Debian-HA) 
 * [Debian-HA](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
 * [Cluster-Labs](https://clusterlabs.org/)
@@ -488,3 +489,4 @@ Resources:
 * [NetWorkManager](https://wiki.debian.org/NetworkConfiguration)
 * [Ubuntu Certified Hardware](https://ubuntu.com/certified)
 * [Hosts](https://wiki.debian.org/Hostname)
+* [Compiling Software](https://help.ubuntu.com/community/CompilingSoftware)
