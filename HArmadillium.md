@@ -253,11 +253,6 @@ sudo pcs host auth armadillium01 armadillium02 armadillium03 armadillium04
 #armadillium03: Authorized
 #armadillium04: Authorized
 ```
-* ##### PCS Setup Cluster : 
-```bash
-#armadillium01
-sudo pcs cluster setup HArmadillium armadillium01 armadillium02 armadillium03 armadillium04
-```
 
 [ClusterLabs](https://clusterlabs.org/pacemaker/doc/2.1/Clusters_from_Scratch/html/cluster-setup.html) (3.3.2. Enable pcs Daemon)
 
