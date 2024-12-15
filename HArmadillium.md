@@ -348,6 +348,7 @@ sudo mkdir /etc/nginx/ssl
 ```bash
 git clone https://github.com/universalbit-dev/HArmadillium/
 cd HArmadillium/ssl
+sudo mkdir /etc/nginx/ssl
 openssl req -new -x509 -nodes -sha256 -days 365 -key host.key -out host.cert -config distinguished.cnf
 sudo cp host.key host.cert /etc/nginx/ssl
 ```
