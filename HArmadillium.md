@@ -342,15 +342,15 @@ sudo apt install openssl nginx git -y
 ## [HTTPS]
 #### self-signed certificate (HTTPS) with OpenSSL 
 ```bash
-sudo mkdir /etc/nginx/ssl
+
 ```
 
 ```bash
 git clone https://github.com/universalbit-dev/HArmadillium/
 cd HArmadillium/ssl
 sudo mkdir /etc/nginx/ssl
-openssl req -new -x509 -nodes -sha256 -days 365 -key host.key -out host.cert -config distinguished.cnf
-sudo cp host.key host.cert /etc/nginx/ssl
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/host.key -out /etc/nginx/ssl/host.cert --config distinguished.cnf
+sudo openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
 ```
 
 ## Nginx Configuration File (default)
